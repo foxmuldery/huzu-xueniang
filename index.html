@@ -33,6 +33,11 @@ body{background:#0a0a14;color:#ede4d4;font-family:"PingFang SC","Noto Serif SC",
 .bible-detail blockquote{border-left:2px solid rgba(200,170,120,.4);padding:6px 16px;margin:10px 0;color:rgba(215,200,170,.7);font-size:14px;font-style:italic}
 .bible-detail em{font-style:normal;color:#d4c8a0}
 
+/* ── Category divider ── */
+.cat-divider{max-width:1400px;margin:60px auto 0;padding:0 24px;display:flex;align-items:center;gap:16px}
+.cat-divider .line{flex:1;height:1px;background:rgba(180,160,120,.15)}
+.cat-divider .cat-label{font-size:13px;letter-spacing:.2em;color:rgba(180,150,100,.4);white-space:nowrap}
+
 .section-block{max-width:1400px;margin:0 auto;padding:0 24px}
 .section-title{display:flex;align-items:center;gap:14px;margin:52px 0 24px}
 .section-title:first-of-type{margin-top:36px}
@@ -71,9 +76,9 @@ body{background:#0a0a14;color:#ede4d4;font-family:"PingFang SC","Noto Serif SC",
 .sidebar-nav a:hover{color:rgba(230,210,160,.85);background:rgba(200,170,120,.06)}
 .sidebar-nav a.active{color:#d4c8a0;background:rgba(200,170,120,.1);border-left:2px solid rgba(200,170,120,.5)}
 .sidebar-nav .nav-group{font-size:10px;color:rgba(150,130,90,.35);letter-spacing:.15em;padding:14px 14px 6px;text-transform:uppercase}
+.sidebar-nav .nav-major{font-size:11px;color:rgba(200,170,120,.5);letter-spacing:.15em;padding:16px 14px 4px;border-top:1px solid rgba(180,160,120,.1)}
 .sidebar-toggle{display:none;position:fixed;top:14px;left:14px;z-index:901;width:36px;height:36px;border:1px solid rgba(180,160,120,.25);border-radius:4px;background:rgba(10,10,22,.9);color:rgba(200,180,140,.6);font-size:20px;cursor:pointer;align-items:center;justify-content:center}
 
-/* ── Main content offset ── */
 .main-wrapper{margin-left:180px}
 
 @media(max-width:768px){
@@ -96,15 +101,16 @@ body{background:#0a0a14;color:#ede4d4;font-family:"PingFang SC","Noto Serif SC",
 </div>
 <div class="sidebar-nav">
 <a href="#top" class="active" data-nav="top">▸ 页面顶部</a>
-<div class="nav-group">角色设定</div>
-<a href="#bible-core" data-nav="bible">造型圣经</a>
-<div class="nav-group">视觉图集</div>
+<div class="nav-major">守灯造型</div>
+<a href="#bible-lamp" data-nav="bible-lamp">守灯造型圣经</a>
 <a href="#sec-angles" data-nav="angles">📐 多角度视图</a>
 <a href="#sec-fullbody" data-nav="fullbody">👘 全身与姿态</a>
+<div class="nav-major">祭祀造型</div>
+<a href="#bible-ritual" data-nav="ritual-bible">祭祀造型圣经</a>
+<a href="#sec-ritual" data-nav="ritual">🙏 祭祀造型</a>
 </div>
 </nav>
 
-<!-- ── Mobile toggle ── -->
 <button class="sidebar-toggle" id="sidebarToggle" onclick="toggleSidebar()">☰</button>
 
 <div class="main-wrapper">
@@ -112,15 +118,18 @@ body{background:#0a0a14;color:#ede4d4;font-family:"PingFang SC","Noto Serif SC",
 <header class="hero">
 <p class="ep-title">狐祖归来 · EP01</p>
 <h1>王 雪 娘</h1>
-<p class="subtitle">守灯少女 · 造型图集 · 十二图</p>
+<p class="subtitle">守灯少女 · 造型图集 · 十七图</p>
 </header>
 
-<div class="bible-core" id="bible-core">
+<!-- ═══════ 守灯造型 ═══════ -->
+<div class="cat-divider" id="bible-lamp"><div class="line"></div><span class="cat-label">守 灯 造 型</span><div class="line"></div></div>
+
+<div class="bible-core">
 <div class="bible-definition">雪娘不是普通的弱女子。<br>她是<em>「被遗忘的狐族贵女」</em>——身披低阶守灯人的身份，<br>但身体、气质和细节里隐藏着<em>千年狐祖血脉</em>。</div>
 <div class="bible-tones">
 <span class="bible-tone">孤灯</span><span class="bible-tone">雪</span><span class="bible-tone">隐狐</span><span class="bible-tone">贵族残影</span><span class="bible-tone">未醒的妖</span>
 </div>
-<button class="bible-toggle" id="bibleToggle" onclick="toggleBible()">▸ 查阅完整造型圣经</button>
+<button class="bible-toggle" id="bibleToggle" onclick="toggleBible()">▸ 查阅守灯造型圣经</button>
 <div class="bible-detail" id="bibleDetail">
 <h3>一、角色定位</h3>
 <p><strong>角色名称：</strong>王雪娘 &nbsp;|&nbsp; <strong>EP01身份：</strong>王氏旁支守灯少女 &nbsp;|&nbsp; <strong>狐族血统：</strong>白狐一脉，隐藏的狐祖血脉 &nbsp;|&nbsp; <strong>当前状态：</strong>未觉醒</p>
@@ -152,6 +161,59 @@ body{background:#0a0a14;color:#ede4d4;font-family:"PingFang SC","Noto Serif SC",
 </div>
 </div>
 
+<!-- ═══════ 祭祀造型 ═══════ -->
+<div class="cat-divider" id="bible-ritual"><div class="line"></div><span class="cat-label">祭 祀 造 型</span><div class="line"></div></div>
+
+<div class="bible-core">
+<div class="bible-definition">一个普通少女，被狐族以最高规格的祭礼服饰包装成献给祖先的<em>「圣物」</em>，<br>但她体内隐藏着<em>沉睡千年的狐祖血脉</em>。</div>
+<div class="bible-tones">
+<span class="bible-tone">雪</span><span class="bible-tone">灯</span><span class="bible-tone">血</span><span class="bible-tone">灵纱</span>
+</div>
+<button class="bible-toggle" id="bibleRitualToggle" onclick="toggleRitualBible()">▸ 查阅祭祀造型圣经</button>
+<div class="bible-detail" id="bibleRitualDetail">
+<h3>一、角色定位</h3>
+<p>角色：王雪娘。EP01身份：青丘王氏旁支守灯少女，被族群选中作为替劫祭品。</p>
+<blockquote>她不是新娘，不是女王，不是圣女。她是即将觉醒的狐祖容器。</blockquote>
+
+<h3>二、整体视觉关键词</h3>
+<ul><li><strong>雪</strong>——清白、孤独、未觉醒</li><li><strong>灯</strong>——守护、血脉、传承</li><li><strong>血</strong>——狐祖力量与隐藏危险</li><li><strong>灵纱</strong>——献祭、封印、祖灵连接</li></ul>
+
+<h3>三、整体轮廓设计</h3>
+<p>核心：东方神像感。比例：少女感70% + 狐族神秘感30%。轮廓：肩部略展开、身体修长、高领封闭、长裙垂落、大面积留白。</p>
+<blockquote>第一印象：一个被送往祭坛的雪中少女。</blockquote>
+
+<h3>四、头部设计</h3>
+<p><strong>最终方案：取消所有头冠。</strong>取消狐骨冠、皇冠、骨质装饰。唯一头部视觉：狐血祭灵纱。</p>
+
+<h3>五、祭灵头纱设计</h3>
+<p>定义：狐族献祭仪式中，用于连接祖灵与祭品的灵性纱幕。覆盖头顶、后脑、肩后、背部。不遮挡脸部、不遮挡胸口、不覆盖身体主体。材质：半透明，具有微反光。灯光下：银白闪烁、珠光流动、若隐若现。</p>
+
+<h3>六、头纱红色宝石</h3>
+<p>定义：狐族血脉节点。大小不一、少量分布，集中于头纱边缘、两侧垂落区域、背部。视觉像雪中的血滴。避免密集排列、满身红珠、婚礼珠帘感。</p>
+
+<h3>七、面部设计</h3>
+<p>核心：人类少女外表，狐妖内核。眼睛：狭长眼型、微微上挑、内眼角少量亮色。妆容：清冷、透明、带一点妖性。唇色：冷红，像雪中血色。</p>
+
+<h3>八、手部设计——唯一明显妖性位置</h3>
+<p>狐妖指甲：修长、尖端、半透明、微红色泽。不是兽爪，而是高级妖性。</p>
+
+<h3>九、材质系统</h3>
+<ul><li>丝绸——狐族贵族血脉</li><li>灵纱——祭祀仪式</li><li>玉——狐族传承</li><li>红宝石——狐血</li><li>银线——月光</li></ul>
+
+<h3>十、色彩系统</h3>
+<p>月白 70% · 银灰 15% · 玉灰 10% · 血红 5%。<strong>禁止：</strong>大面积红黑、金色奢华、五彩仙侠。</p>
+
+<h3>十一、摄影定妆标准</h3>
+<p>真人影视定妆照。不是插画、概念画、游戏角色。背景纯色（推荐灰色）。灯光：柔和侧光、轮廓光、微弱反射。构图：全身正面，锁定服装结构、头纱、手部。</p>
+
+<h3>十二、AI资产标准</h3>
+<ul><li>A01：全身锚点</li><li>A02：三视图，锁定头纱流线</li><li>A03：面部特写</li><li>A04：手部特写，锁定尖指甲</li><li>A05：材质图，锁定头纱、宝石、丝绸、银线</li></ul>
+
+<h3>十三、最终视觉宣言</h3>
+<blockquote>雪娘的月白祭品造型，不是一个少女穿上华服，而是一个普通少女被狐族文明包装成献给祖灵的圣物。她没有王冠，没有权杖，没有外显妖形。只有一袭月白祭衣，一层会发光的灵纱，一双隐藏狐性的尖锐指甲。这个看似柔弱的祭品，才是千年狐族真正等待归来的祖先。</blockquote>
+</div>
+</div>
+
 <div id="content-root"></div>
 
 <div class="lightbox" id="lightbox">
@@ -161,23 +223,23 @@ body{background:#0a0a14;color:#ede4d4;font-family:"PingFang SC","Noto Serif SC",
 <div class="lb-info" id="lbInfo"></div>
 <span class="lb-nav lb-next" id="lbNext">&#8250;</span>
 </div>
-<div class="footer">狐祖归来 · 王雪娘 · 守灯少女 · 十二造型图</div>
+<div class="footer">狐祖归来 · 王雪娘 · 守灯少女 · 十七造型图</div>
 
 </div><!-- /.main-wrapper -->
 
 <script>
-function toggleBible(){var d=document.getElementById("bibleDetail"),b=document.getElementById("bibleToggle");if(d.classList.contains("active")){d.classList.remove("active");b.innerHTML="▸ 查阅完整造型圣经"}else{d.classList.add("active");b.innerHTML="▾ 收起造型圣经";d.scrollIntoView({behavior:"smooth",block:"nearest"})}}
+function toggleBible(){var d=document.getElementById("bibleDetail"),b=document.getElementById("bibleToggle");if(d.classList.contains("active")){d.classList.remove("active");b.innerHTML="▸ 查阅守灯造型圣经"}else{d.classList.add("active");b.innerHTML="▾ 收起守灯造型圣经";d.scrollIntoView({behavior:"smooth",block:"nearest"})}}
+function toggleRitualBible(){var d=document.getElementById("bibleRitualDetail"),b=document.getElementById("bibleRitualToggle");if(d.classList.contains("active")){d.classList.remove("active");b.innerHTML="▸ 查阅祭祀造型圣经"}else{d.classList.add("active");b.innerHTML="▾ 收起祭祀造型圣经";d.scrollIntoView({behavior:"smooth",block:"nearest"})}}
 
 function toggleSidebar(){document.getElementById("sidebar").classList.toggle("open")}
 
 function scrollToSection(id){document.querySelector(id).scrollIntoView({behavior:"smooth",block:"start"})}
 
-// ── Sidebar nav click handlers ──
 document.querySelectorAll(".sidebar-nav a").forEach(function(a){a.addEventListener("click",function(e){e.preventDefault();var id=this.getAttribute("href");if(id==="#top"){window.scrollTo({top:0,behavior:"smooth"})}else{scrollToSection(id)}document.getElementById("sidebar").classList.remove("open")})})
 
 // ── Scroll spy ──
 var navLinks=document.querySelectorAll(".sidebar-nav a[data-nav]");
-var sectionMap={"top":0,"bible":"#bible-core","angles":"#sec-angles","fullbody":"#sec-fullbody"};
+var sectionMap={"top":0,"bible-lamp":"#bible-lamp","angles":"#sec-angles","fullbody":"#sec-fullbody","ritual-bible":"#bible-ritual","ritual":"#sec-ritual"};
 var offsets={};
 function updateOffsets(){for(var k in sectionMap){if(sectionMap[k]===0){offsets[k]=0}else{var el=document.querySelector(sectionMap[k]);offsets[k]=el?el.offsetTop-120:99999}}}
 function setActive(nav){navLinks.forEach(function(l){l.classList.remove("active")});var t=document.querySelector('.sidebar-nav a[data-nav="'+nav+'"]');if(t)t.classList.add("active")}
@@ -187,6 +249,7 @@ setActive(active)})
 window.addEventListener("resize",updateOffsets)
 
 const scenes=[
+// ── 守灯 · 多角度视图 ──
 {file:"狐祖归来_雪娘_正面正视.png",name:"正面正视",script:"正面标准视角——展现完整造型、面容与站姿，守灯少女的克制与优雅",section:"📐 多角度视图"},
 {file:"狐祖归来_雪娘_左侧正侧.png",name:"左侧正侧",script:"左侧90°正侧——展现侧面轮廓、发型结构与服装层次",section:"📐 多角度视图"},
 {file:"狐祖归来_雪娘_右侧正侧.png",name:"右侧正侧",script:"右侧90°正侧——展现狐妖高跟鞋、身体曲线与侧面饰品位",section:"📐 多角度视图"},
@@ -194,16 +257,25 @@ const scenes=[
 {file:"狐祖归来_雪娘_右侧45度.png",name:"右侧45度",script:"右前45°——红宝石耳钉可见，发簪与侧颜自然呈现",section:"📐 多角度视图"},
 {file:"狐祖归来_雪娘_俯视角度.png",name:"俯视角度",script:"自上而下俯视——展现发型顶部结构、肩部轮廓与裙摆铺展",section:"📐 多角度视图"},
 {file:"狐祖归来_雪娘_仰视角度.png",name:"仰视角度",script:"自下而上仰视——展现下半身服装流动、狐妖高跟鞋与身体比例",section:"📐 多角度视图"},
+
+// ── 守灯 · 全身与姿态 ──
 {file:"狐祖归来_雪娘_正面全身.png",name:"正面全身",script:"标准全身正面——完整展示灰青旧丝外袍、半透明狐袖、尾流裙摆与整体比例",section:"👘 全身与姿态"},
 {file:"狐祖归来_雪娘_背面全身.png",name:"背面全身",script:"全身背面——展现高束发型全貌、尾流裙摆的拖曳感与背面服饰层次",section:"👘 全身与姿态"},
 {file:"狐祖归来_雪娘_侧面全身.png",name:"侧面全身",script:"全身侧面——展现侧面轮廓、狐妖高跟鞋在转身时偶露的暗示",section:"👘 全身与姿态"},
 {file:"狐祖归来_雪娘_动态站姿.png",name:"动态站姿",script:"轻微动作中的动态站姿——捕捉裙摆流动、袖口飘逸的狐性瞬间",section:"👘 全身与姿态"},
-{file:"狐祖归来_雪娘_特写细节.png",name:"特写细节",script:"妆面与饰品特写——锁定狐眼（眼尾微挑、暗红内眼线）、红宝石耳钉、雪感底妆与旧银发簪",section:"👘 全身与姿态"}
+{file:"狐祖归来_雪娘_特写细节.png",name:"特写细节",script:"妆面与饰品特写——锁定狐眼（眼尾微挑、暗红内眼线）、红宝石耳钉、雪感底妆与旧银发簪",section:"👘 全身与姿态"},
+
+// ── 祭祀造型 ──
+{file:"祭祀_狐祖归来_雪娘_正面全身.png",name:"祭祀 · 正面全身",script:"祭祀装束正面——庄严的古祭服饰，展现雪娘身负祖火、向天祈愿的仪式姿态",section:"🙏 祭祀造型"},
+{file:"祭祀_狐祖归来_雪娘_背面全身.png",name:"祭祀 · 背面全身",script:"祭祀装束背面——长发垂落、祭袍拖地，背影中可见狐族纹样暗绣",section:"🙏 祭祀造型"},
+{file:"祭祀_狐祖归来_雪娘_侧面全身.png",name:"祭祀 · 侧面全身",script:"祭祀装束侧面——祭袍层叠流动，袖口与裙摆的仪式感线条",section:"🙏 祭祀造型"},
+{file:"祭祀_狐祖归来_雪娘_动态站姿.png",name:"祭祀 · 动态站姿",script:"祭祀动作中的动态——举手投足间的仪式韵律，祭火映照指尖",section:"🙏 祭祀造型"},
+{file:"祭祀_狐祖归来_雪娘_特写细节.png",name:"祭祀 · 特写细节",script:"祭祀妆面与祭器特写——祭纹、古银饰、仪式妆容，锁住神圣感的每一处细节",section:"🙏 祭祀造型"}
 ];
 
 const root=document.getElementById("content-root");
 const doneSections=new Set();
-const secIds={"📐 多角度视图":"sec-angles","👘 全身与姿态":"sec-fullbody"};
+const secIds={"📐 多角度视图":"sec-angles","👘 全身与姿态":"sec-fullbody","🙏 祭祀造型":"sec-ritual"};
 scenes.forEach((sc,i)=>{
 const sec=sc.section;
 if(!doneSections.has(sec)){
