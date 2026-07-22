@@ -61,10 +61,53 @@ body{background:#0a0a14;color:#ede4d4;font-family:"PingFang SC","Noto Serif SC",
 .lightbox .lb-close:hover{color:rgba(230,215,180,.9)}
 .footer{text-align:center;padding:60px 20px 80px;font-size:14px;letter-spacing:.1em;color:rgba(170,150,110,.4)}
 
+/* ── Sidebar ── */
+.sidebar{position:fixed;top:0;left:0;width:180px;height:100vh;background:rgba(10,10,22,.95);border-right:1px solid rgba(180,160,120,.12);z-index:900;display:flex;flex-direction:column;padding:32px 0;overflow-y:auto;-webkit-overflow-scrolling:touch}
+.sidebar-logo{text-align:center;padding:0 16px 24px;border-bottom:1px solid rgba(180,160,120,.1);margin-bottom:16px}
+.sidebar-logo .s-name{font-size:15px;color:#d4c8a8;letter-spacing:.12em;line-height:1.6}
+.sidebar-logo .s-sub{font-size:11px;color:rgba(180,160,120,.4);letter-spacing:.15em;margin-top:2px}
+.sidebar-nav{flex:1;padding:0 12px}
+.sidebar-nav a{display:block;padding:9px 14px;font-size:13px;color:rgba(200,180,140,.5);letter-spacing:.08em;text-decoration:none;border-radius:4px;transition:all .2s;margin-bottom:2px;cursor:pointer}
+.sidebar-nav a:hover{color:rgba(230,210,160,.85);background:rgba(200,170,120,.06)}
+.sidebar-nav a.active{color:#d4c8a0;background:rgba(200,170,120,.1);border-left:2px solid rgba(200,170,120,.5)}
+.sidebar-nav .nav-group{font-size:10px;color:rgba(150,130,90,.35);letter-spacing:.15em;padding:14px 14px 6px;text-transform:uppercase}
+.sidebar-toggle{display:none;position:fixed;top:14px;left:14px;z-index:901;width:36px;height:36px;border:1px solid rgba(180,160,120,.25);border-radius:4px;background:rgba(10,10,22,.9);color:rgba(200,180,140,.6);font-size:20px;cursor:pointer;align-items:center;justify-content:center}
+
+/* ── Main content offset ── */
+.main-wrapper{margin-left:180px}
+
+@media(max-width:768px){
+.sidebar{transform:translateX(-100%);transition:transform .3s ease}
+.sidebar.open{transform:translateX(0)}
+.sidebar-toggle{display:flex}
+.main-wrapper{margin-left:0}
+}
+
 @media(max-width:480px){.gallery{grid-template-columns:1fr;gap:20px}.hero{padding:40px 16px 30px}.bible-definition{font-size:15px;padding:14px 18px}.bible-detail{padding:20px 16px}}
 </style>
 </head>
 <body>
+
+<!-- ── Sidebar ── -->
+<nav class="sidebar" id="sidebar">
+<div class="sidebar-logo">
+<div class="s-name">王雪娘</div>
+<div class="s-sub">狐祖归来 · EP01</div>
+</div>
+<div class="sidebar-nav">
+<a href="#top" class="active" data-nav="top">▸ 页面顶部</a>
+<div class="nav-group">角色设定</div>
+<a href="#bible-core" data-nav="bible">造型圣经</a>
+<div class="nav-group">视觉图集</div>
+<a href="#sec-angles" data-nav="angles">📐 多角度视图</a>
+<a href="#sec-fullbody" data-nav="fullbody">👘 全身与姿态</a>
+</div>
+</nav>
+
+<!-- ── Mobile toggle ── -->
+<button class="sidebar-toggle" id="sidebarToggle" onclick="toggleSidebar()">☰</button>
+
+<div class="main-wrapper">
 
 <header class="hero">
 <p class="ep-title">狐祖归来 · EP01</p>
@@ -72,7 +115,7 @@ body{background:#0a0a14;color:#ede4d4;font-family:"PingFang SC","Noto Serif SC",
 <p class="subtitle">守灯少女 · 造型图集 · 十二图</p>
 </header>
 
-<div class="bible-core">
+<div class="bible-core" id="bible-core">
 <div class="bible-definition">雪娘不是普通的弱女子。<br>她是<em>「被遗忘的狐族贵女」</em>——身披低阶守灯人的身份，<br>但身体、气质和细节里隐藏着<em>千年狐祖血脉</em>。</div>
 <div class="bible-tones">
 <span class="bible-tone">孤灯</span><span class="bible-tone">雪</span><span class="bible-tone">隐狐</span><span class="bible-tone">贵族残影</span><span class="bible-tone">未醒的妖</span>
@@ -120,8 +163,28 @@ body{background:#0a0a14;color:#ede4d4;font-family:"PingFang SC","Noto Serif SC",
 </div>
 <div class="footer">狐祖归来 · 王雪娘 · 守灯少女 · 十二造型图</div>
 
+</div><!-- /.main-wrapper -->
+
 <script>
 function toggleBible(){var d=document.getElementById("bibleDetail"),b=document.getElementById("bibleToggle");if(d.classList.contains("active")){d.classList.remove("active");b.innerHTML="▸ 查阅完整造型圣经"}else{d.classList.add("active");b.innerHTML="▾ 收起造型圣经";d.scrollIntoView({behavior:"smooth",block:"nearest"})}}
+
+function toggleSidebar(){document.getElementById("sidebar").classList.toggle("open")}
+
+function scrollToSection(id){document.querySelector(id).scrollIntoView({behavior:"smooth",block:"start"})}
+
+// ── Sidebar nav click handlers ──
+document.querySelectorAll(".sidebar-nav a").forEach(function(a){a.addEventListener("click",function(e){e.preventDefault();var id=this.getAttribute("href");if(id==="#top"){window.scrollTo({top:0,behavior:"smooth"})}else{scrollToSection(id)}document.getElementById("sidebar").classList.remove("open")})})
+
+// ── Scroll spy ──
+var navLinks=document.querySelectorAll(".sidebar-nav a[data-nav]");
+var sectionMap={"top":0,"bible":"#bible-core","angles":"#sec-angles","fullbody":"#sec-fullbody"};
+var offsets={};
+function updateOffsets(){for(var k in sectionMap){if(sectionMap[k]===0){offsets[k]=0}else{var el=document.querySelector(sectionMap[k]);offsets[k]=el?el.offsetTop-120:99999}}}
+function setActive(nav){navLinks.forEach(function(l){l.classList.remove("active")});var t=document.querySelector('.sidebar-nav a[data-nav="'+nav+'"]');if(t)t.classList.add("active")}
+window.addEventListener("scroll",function(){updateOffsets();var scrollY=window.scrollY+150;var active="top";
+for(var k in offsets){if(scrollY>=offsets[k])active=k}
+setActive(active)})
+window.addEventListener("resize",updateOffsets)
 
 const scenes=[
 {file:"狐祖归来_雪娘_正面正视.png",name:"正面正视",script:"正面标准视角——展现完整造型、面容与站姿，守灯少女的克制与优雅",section:"📐 多角度视图"},
@@ -140,11 +203,13 @@ const scenes=[
 
 const root=document.getElementById("content-root");
 const doneSections=new Set();
+const secIds={"📐 多角度视图":"sec-angles","👘 全身与姿态":"sec-fullbody"};
 scenes.forEach((sc,i)=>{
 const sec=sc.section;
 if(!doneSections.has(sec)){
 doneSections.add(sec);
 const block=document.createElement("div");block.className="section-block";
+if(secIds[sec])block.id=secIds[sec];
 const title=document.createElement("div");title.className="section-title";
 title.innerHTML=`<div class="line"></div><h2>▎${sec}</h2><div class="line"></div>`;
 block.appendChild(title);
