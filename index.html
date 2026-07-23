@@ -140,7 +140,8 @@ body{background:#0a0a14;color:#ede4d4;font-family:"PingFang SC","Noto Serif SC",
 <div class="nav-major">临渊·泽狐</div>
 <a href="#sec-linyuan" data-nav="linyuan">🌊 临渊面部</a>
 <div class="nav-major">王玄晏</div>
-<a href="#sec-xuanyan" data-nav="xuanyan">🦊 王玄晏</a>
+<a href="#sec-xuanyan-body" data-nav="xuanyan-body">🦊 王玄晏全身</a>
+<a href="#sec-xuanyan-face" data-nav="xuanyan-face">🦊 王玄晏面部</a>
 </div>
 </nav>
 
@@ -151,7 +152,7 @@ body{background:#0a0a14;color:#ede4d4;font-family:"PingFang SC","Noto Serif SC",
 <header class="hero">
 <p class="ep-title">狐祖归来 · EP01</p>
 <h1>狐 祖 归 来</h1>
-<p class="subtitle">雪娘 · 临渊 · 玄晏 造型图集 · 三十九图</p>
+<p class="subtitle">雪娘 · 临渊 · 玄晏 造型图集 · 四十六图</p>
 </header>
 
 <!-- ═══════ 守灯造型 ═══════ -->
@@ -359,7 +360,7 @@ body{background:#0a0a14;color:#ede4d4;font-family:"PingFang SC","Noto Serif SC",
 <div class="lb-info" id="lbInfo"></div>
 <span class="lb-nav lb-next" id="lbNext">&#8250;</span>
 </div>
-<div class="footer">狐祖归来 · 雪娘 · 临渊 · 玄晏 · 三十九造型图</div>
+<div class="footer">狐祖归来 · 雪娘 · 临渊 · 玄晏 · 四十六造型图</div>
 
 </div><!-- /.main-wrapper -->
 
@@ -383,7 +384,7 @@ document.querySelectorAll(".sidebar-nav a").forEach(function(a){a.addEventListen
 
 // ── Scroll spy ──
 var navLinks=document.querySelectorAll(".sidebar-nav a[data-nav]");
-var sectionMap={"top":0,"bible-lamp":"#bible-lamp","angles":"#sec-angles","fullbody":"#sec-fullbody","ritual-bible":"#bible-ritual","ritual":"#sec-ritual","awaken-bible":"#bible-awaken","awaken":"#sec-awaken","normal-bible":"#bible-normal","normal":"#sec-normal","linyuan":"#sec-linyuan","xuanyan":"#sec-xuanyan"};
+var sectionMap={"top":0,"bible-lamp":"#bible-lamp","angles":"#sec-angles","fullbody":"#sec-fullbody","ritual-bible":"#bible-ritual","ritual":"#sec-ritual","awaken-bible":"#bible-awaken","awaken":"#sec-awaken","normal-bible":"#bible-normal","normal":"#sec-normal","linyuan":"#sec-linyuan","xuanyan-body":"#sec-xuanyan-body","xuanyan-face":"#sec-xuanyan-face"};
 var offsets={};
 function updateOffsets(){for(var k in sectionMap){if(sectionMap[k]===0){offsets[k]=0}else{var el=document.querySelector(sectionMap[k]);offsets[k]=el?el.offsetTop-120:99999}}}
 function setActive(nav){navLinks.forEach(function(l){l.classList.remove("active")});var t=document.querySelector('.sidebar-nav a[data-nav="'+nav+'"]');if(t)t.classList.add("active")}
@@ -440,16 +441,25 @@ const scenes=[
 {file:"狐祖归来_临渊_仰视角度.png",name:"临渊 · 仰视角度",script:"临渊仰视——自下而上，下颌线条与眼神的高位感",section:"🌊 临渊面部"},
 
 // ── 王玄晏 ──
-{file:"狐祖归来_王玄晏_正面全身.png",name:"玄晏 · 正面全身",script:"王玄晏正面——白狐正堂之主，深色华服，眼神冷峻如刀",section:"🦊 王玄晏"},
-{file:"狐祖归来_王玄晏_背面全身.png",name:"玄晏 · 背面全身",script:"王玄晏背面——宽肩束腰，背影如山，狐族掌权者的压迫感",section:"🦊 王玄晏"},
-{file:"狐祖归来_王玄晏_侧面全身.png",name:"玄晏 · 侧面全身",script:"王玄晏侧面——侧颜棱角分明，身姿挺拔如松",section:"🦊 王玄晏"},
-{file:"狐祖归来_王玄晏_动态站姿.png",name:"玄晏 · 动态站姿",script:"王玄晏动态——衣袍微动，步态沉稳，王者之姿",section:"🦊 王玄晏"},
-{file:"狐祖归来_王玄晏_特写细节.png",name:"玄晏 · 特写细节",script:"王玄晏细节——衣纹刺绣、腰饰玉佩、面容纹理，暗藏白狐族徽",section:"🦊 王玄晏"}
+{file:"狐祖归来_王玄晏_正面全身.png",name:"玄晏 · 正面全身",script:"王玄晏正面——白狐正堂之主，深色华服，眼神冷峻如刀",section:"🦊 王玄晏全身"},
+{file:"狐祖归来_王玄晏_背面全身.png",name:"玄晏 · 背面全身",script:"王玄晏背面——宽肩束腰，背影如山，狐族掌权者的压迫感",section:"🦊 王玄晏全身"},
+{file:"狐祖归来_王玄晏_侧面全身.png",name:"玄晏 · 侧面全身",script:"王玄晏侧面——侧颜棱角分明，身姿挺拔如松",section:"🦊 王玄晏全身"},
+{file:"狐祖归来_王玄晏_动态站姿.png",name:"玄晏 · 动态站姿",script:"王玄晏动态——衣袍微动，步态沉稳，王者之姿",section:"🦊 王玄晏全身"},
+{file:"狐祖归来_王玄晏_特写细节.png",name:"玄晏 · 特写细节",script:"王玄晏细节——衣纹刺绣、腰饰玉佩、面容纹理，暗藏白狐族徽",section:"🦊 王玄晏全身"},
+
+// ── 王玄晏面部 ──
+{file:"狐祖归来_王玄晏_正面正视.png",name:"玄晏 · 正面正视",script:"玄晏正脸——冷峻深沉，不怒自威，白狐家主的压迫气场",section:"🦊 王玄晏面部"},
+{file:"狐祖归来_王玄晏_左侧正侧.png",name:"玄晏 · 左侧正侧",script:"玄晏左正侧——侧颜如刀削，额角与下颌的棱角分明",section:"🦊 王玄晏面部"},
+{file:"狐祖归来_王玄晏_右侧正侧.png",name:"玄晏 · 右侧正侧",script:"玄晏右正侧——发冠与肩线的威严轮廓",section:"🦊 王玄晏面部"},
+{file:"狐祖归来_王玄晏_左侧45度.png",name:"玄晏 · 左侧45度",script:"玄晏左45°——微侧间流露掌权者的隐忍与算计",section:"🦊 王玄晏面部"},
+{file:"狐祖归来_王玄晏_右侧45度.png",name:"玄晏 · 右侧45度",script:"玄晏右45°——眼神微睨，狐族权谋尽在不言",section:"🦊 王玄晏面部"},
+{file:"狐祖归来_王玄晏_俯视角度.png",name:"玄晏 · 俯视角度",script:"玄晏俯视——冠顶与肩甲结构，俯瞰众生",section:"🦊 王玄晏面部"},
+{file:"狐祖归来_王玄晏_仰视角度.png",name:"玄晏 · 仰视角度",script:"玄晏仰视——下颌线条与眼神的高位威压",section:"🦊 王玄晏面部"}
 ];
 
 const root=document.getElementById("content-root");
 const doneSections=new Set();
-const secIds={"📐 多角度视图":"sec-angles","👘 全身与姿态":"sec-fullbody","🙏 祭祀造型":"sec-ritual","⚡ 狐祖降临":"sec-awaken","👑 狐祖常态":"sec-normal","🌊 临渊面部":"sec-linyuan","🦊 王玄晏":"sec-xuanyan"};
+const secIds={"📐 多角度视图":"sec-angles","👘 全身与姿态":"sec-fullbody","🙏 祭祀造型":"sec-ritual","⚡ 狐祖降临":"sec-awaken","👑 狐祖常态":"sec-normal","🌊 临渊面部":"sec-linyuan","🦊 王玄晏全身":"sec-xuanyan-body","🦊 王玄晏面部":"sec-xuanyan-face"};
 scenes.forEach((sc,i)=>{
 const sec=sc.section;
 if(!doneSections.has(sec)){
