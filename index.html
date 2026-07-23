@@ -66,6 +66,18 @@ body{background:#0a0a14;color:#ede4d4;font-family:"PingFang SC","Noto Serif SC",
 .lightbox .lb-close:hover{color:rgba(230,215,180,.9)}
 .footer{text-align:center;padding:60px 20px 80px;font-size:14px;letter-spacing:.1em;color:rgba(170,150,110,.4)}
 
+/* ── Password Gate ── */
+.pw-gate{position:fixed;inset:0;z-index:9999;background:#0a0a14;display:flex;align-items:center;justify-content:center;flex-direction:column}
+.pw-gate.hidden{display:none}
+.pw-gate .pw-box{text-align:center;padding:40px 32px;border:1px solid rgba(180,160,120,.2);border-radius:8px;background:rgba(15,18,28,.9);max-width:360px;width:90%}
+.pw-gate .pw-title{font-size:20px;color:#d4c8a8;letter-spacing:.1em;margin-bottom:6px}
+.pw-gate .pw-sub{font-size:13px;color:rgba(180,160,120,.4);margin-bottom:24px}
+.pw-gate input{display:block;width:100%;padding:10px 14px;margin-bottom:12px;border:1px solid rgba(180,160,120,.25);border-radius:4px;background:rgba(255,255,255,.04);color:#e0d4b8;font-size:16px;text-align:center;letter-spacing:.15em;outline:none;font-family:inherit}
+.pw-gate input:focus{border-color:rgba(200,170,120,.5)}
+.pw-gate .pw-btn{display:inline-block;padding:8px 28px;border:1px solid rgba(180,150,100,.3);border-radius:4px;background:transparent;color:rgba(200,180,140,.6);cursor:pointer;font-size:14px;letter-spacing:.1em;transition:all .2s;font-family:inherit}
+.pw-gate .pw-btn:hover{color:rgba(230,210,160,.9);border-color:rgba(180,150,100,.5);background:rgba(180,150,100,.06)}
+.pw-gate .pw-err{font-size:12px;color:rgba(200,100,80,.7);margin-top:8px;display:none}
+
 /* ── Sidebar ── */
 .sidebar{position:fixed;top:0;left:0;width:180px;height:100vh;background:rgba(10,10,22,.95);border-right:1px solid rgba(180,160,120,.12);z-index:900;display:flex;flex-direction:column;padding:32px 0;overflow-y:auto;-webkit-overflow-scrolling:touch}
 .sidebar-logo{text-align:center;padding:0 16px 24px;border-bottom:1px solid rgba(180,160,120,.1);margin-bottom:16px}
@@ -92,6 +104,17 @@ body{background:#0a0a14;color:#ede4d4;font-family:"PingFang SC","Noto Serif SC",
 </style>
 </head>
 <body>
+
+<!-- ── Password Gate ── -->
+<div class="pw-gate" id="pwGate">
+<div class="pw-box">
+<div class="pw-title">王雪娘 · 造型图集</div>
+<div class="pw-sub">狐祖归来 EP01 · 雪夜孤灯</div>
+<input type="password" id="pwInput" placeholder="请输入访问密码" onkeydown="if(event.key==='Enter')checkPw()">
+<button class="pw-btn" onclick="checkPw()">进 入</button>
+<div class="pw-err" id="pwErr">密码错误，请重试</div>
+</div>
+</div>
 
 <!-- ── Sidebar ── -->
 <nav class="sidebar" id="sidebar">
@@ -228,6 +251,12 @@ body{background:#0a0a14;color:#ede4d4;font-family:"PingFang SC","Noto Serif SC",
 </div><!-- /.main-wrapper -->
 
 <script>
+// ── Password Gate ──
+const PW_HASH="019be397cf10ba2e242d7507db0852b1dcab423c62bd150024ef1333a68136aa";
+async function sha256(t){const e=new TextEncoder().encode(t),h=await crypto.subtle.digest("SHA-256",e);return Array.from(new Uint8Array(h)).map(b=>b.toString(16).padStart(2,"0")).join("")}
+async function checkPw(){var p=document.getElementById("pwInput").value;if(!p)return;var h=await sha256(p);if(h===PW_HASH){document.getElementById("pwGate").classList.add("hidden");sessionStorage.setItem("huzu_auth","1");document.getElementById("pwErr").style.display="none"}else{document.getElementById("pwErr").style.display="block";document.getElementById("pwInput").value=""}}
+if(sessionStorage.getItem("huzu_auth")==="1")document.getElementById("pwGate").classList.add("hidden")
+
 function toggleBible(){var d=document.getElementById("bibleDetail"),b=document.getElementById("bibleToggle");if(d.classList.contains("active")){d.classList.remove("active");b.innerHTML="▸ 查阅守灯造型圣经"}else{d.classList.add("active");b.innerHTML="▾ 收起守灯造型圣经";d.scrollIntoView({behavior:"smooth",block:"nearest"})}}
 function toggleRitualBible(){var d=document.getElementById("bibleRitualDetail"),b=document.getElementById("bibleRitualToggle");if(d.classList.contains("active")){d.classList.remove("active");b.innerHTML="▸ 查阅祭祀造型圣经"}else{d.classList.add("active");b.innerHTML="▾ 收起祭祀造型圣经";d.scrollIntoView({behavior:"smooth",block:"nearest"})}}
 
