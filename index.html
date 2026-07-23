@@ -140,6 +140,7 @@ body{background:#0a0a14;color:#ede4d4;font-family:"PingFang SC","Noto Serif SC",
 <div class="nav-major">临渊·泽狐</div>
 <a href="#sec-linyuan" data-nav="linyuan">🌊 临渊面部</a>
 <div class="nav-major">王玄晏</div>
+<a href="#bible-xuanyan" data-nav="xuanyan-bible">白狐少主圣经</a>
 <a href="#sec-xuanyan-body" data-nav="xuanyan-body">🦊 王玄晏全身</a>
 <a href="#sec-xuanyan-face" data-nav="xuanyan-face">🦊 王玄晏面部</a>
 <a href="#sec-xuanyan-expr" data-nav="xuanyan-expr">😶 王玄晏表情</a>
@@ -346,10 +347,46 @@ body{background:#0a0a14;color:#ede4d4;font-family:"PingFang SC","Noto Serif SC",
 </div>
 
 <!-- ═══════ 王玄晏 ═══════ -->
-<div class="cat-divider"><div class="line"></div><span class="cat-label">王 玄 晏</span><div class="line"></div></div>
+<div class="cat-divider" id="bible-xuanyan"><div class="line"></div><span class="cat-label">王 玄 晏</span><div class="line"></div></div>
 
 <div class="bible-core">
 <div class="bible-definition">青丘王氏，白狐正堂之主。<br><em>王玄晏</em>——执掌族规，冷峻威严，与雪娘命运对峙。</div>
+<button class="bible-toggle" id="bibleXuanyanToggle" onclick="toggleXuanyanBible()">▸ 查阅白狐少主造型圣经</button>
+<div class="bible-detail" id="bibleXuanyanDetail">
+<h3>一、资产定位</h3>
+<p>角色：王玄晏。身份：青丘白狐少主。状态：第一阶段人形常态。</p>
+<blockquote>冰雪中的白狐贵族，以克制、锋利和距离感建立威严。</blockquote>
+
+<h3>二、人物视觉关键词</h3>
+<p>白狐少主 · 冰雪贵族 · 禁欲美学 · 清冷锋利 · 优雅危险 · 剑客气质 · 青丘正统血脉。视觉目标：第一眼高贵，第二眼危险，第三眼不易接近。</p>
+
+<h3>三、与雪娘的视觉关系</h3>
+<p>雪娘是狐祖（古老、威严、神性）。王玄晏是狐孙（年轻、骄傲、贵族）。<strong>千年狐祖 × 百年白狐少主。</strong>雪娘是山，玄晏是雪上的刀。</p>
+
+<h3>四、服装设计</h3>
+<p>白狐王族战斗礼服，兼具贵族仪式感与剑客行动性。上装：开放式领口展示锁骨与少年贵族线条，肩部简洁银丝暗纹。袖型适合剑术，外层轻纱内层贴身。</p>
+
+<h3>五、色彩系统</h3>
+<p>冰白、月白、银灰为主体。辅助冷金、玉青。禁止暖红、大面积黑色。</p>
+
+<h3>六、腰部与下装</h3>
+<p>白玉腰带（玉石连接+银扣+狐纹），取消繁复垂挂。裤装体系，修身长裤配银白高筒轻甲长靴，适合快速剑术移动。</p>
+
+<h3>七、发型与面部</h3>
+<p>黑色中长发自然散落，简洁头带，古希腊雅典式美学。面部清瘦锋利高冷，灰蓝色眼睛，情绪变化时出现淡金狐光。狐性通过眼尾与神态表达，不兽化。</p>
+
+<h3>八、武器——白狐剑</h3>
+<p>少主佩剑。细长剑身、银白剑鞘、玉石剑饰、冷光质感。服装支持拔剑、转身、快速移动、跃起攻击。</p>
+
+<h3>九、材质系统</h3>
+<p>主材质：白色丝绸、轻纱、银丝刺绣。金属：银、冷金。玉石：青白玉（腰带、饰品、剑柄）。</p>
+
+<h3>十、资产编号与拆分</h3>
+<p>SN_XZ_S05_王玄晏白狐少主。A01 全身定妆 / A02 上半身特写 / A03 腰带与武器 / A04 剑术动作 / A05 白狐血脉显现。</p>
+
+<h3>十一、最终视觉宣言</h3>
+<blockquote>王玄晏不是一只炫耀力量的狐狸。他是青丘最骄傲的白狐少主。他的力量藏在克制里，他的危险藏在优雅里。直到遇见狐祖雪娘，他才发现：自己引以为傲的血统，不过是祖宗眼中的小辈。</blockquote>
+</div>
 </div>
 
 <div id="content-root"></div>
@@ -376,6 +413,7 @@ function toggleBible(){var d=document.getElementById("bibleDetail"),b=document.g
 function toggleRitualBible(){var d=document.getElementById("bibleRitualDetail"),b=document.getElementById("bibleRitualToggle");if(d.classList.contains("active")){d.classList.remove("active");b.innerHTML="▸ 查阅祭祀造型圣经"}else{d.classList.add("active");b.innerHTML="▾ 收起祭祀造型圣经";d.scrollIntoView({behavior:"smooth",block:"nearest"})}}
 function toggleAwakenBible(){var d=document.getElementById("bibleAwakenDetail"),b=document.getElementById("bibleAwakenToggle");if(d.classList.contains("active")){d.classList.remove("active");b.innerHTML="▸ 查阅狐祖降临造型圣经"}else{d.classList.add("active");b.innerHTML="▾ 收起狐祖降临造型圣经";d.scrollIntoView({behavior:"smooth",block:"nearest"})}}
 function toggleNormalBible(){var d=document.getElementById("bibleNormalDetail"),b=document.getElementById("bibleNormalToggle");if(d.classList.contains("active")){d.classList.remove("active");b.innerHTML="▸ 查阅狐祖常态造型圣经"}else{d.classList.add("active");b.innerHTML="▾ 收起狐祖常态造型圣经";d.scrollIntoView({behavior:"smooth",block:"nearest"})}}
+function toggleXuanyanBible(){var d=document.getElementById("bibleXuanyanDetail"),b=document.getElementById("bibleXuanyanToggle");if(d.classList.contains("active")){d.classList.remove("active");b.innerHTML="▸ 查阅白狐少主造型圣经"}else{d.classList.add("active");b.innerHTML="▾ 收起白狐少主造型圣经";d.scrollIntoView({behavior:"smooth",block:"nearest"})}}
 
 function toggleSidebar(){document.getElementById("sidebar").classList.toggle("open")}
 
@@ -385,7 +423,7 @@ document.querySelectorAll(".sidebar-nav a").forEach(function(a){a.addEventListen
 
 // ── Scroll spy ──
 var navLinks=document.querySelectorAll(".sidebar-nav a[data-nav]");
-var sectionMap={"top":0,"bible-lamp":"#bible-lamp","angles":"#sec-angles","fullbody":"#sec-fullbody","ritual-bible":"#bible-ritual","ritual":"#sec-ritual","awaken-bible":"#bible-awaken","awaken":"#sec-awaken","normal-bible":"#bible-normal","normal":"#sec-normal","linyuan":"#sec-linyuan","xuanyan-body":"#sec-xuanyan-body","xuanyan-face":"#sec-xuanyan-face","xuanyan-expr":"#sec-xuanyan-expr"};
+var sectionMap={"top":0,"bible-lamp":"#bible-lamp","angles":"#sec-angles","fullbody":"#sec-fullbody","ritual-bible":"#bible-ritual","ritual":"#sec-ritual","awaken-bible":"#bible-awaken","awaken":"#sec-awaken","normal-bible":"#bible-normal","normal":"#sec-normal","linyuan":"#sec-linyuan","xuanyan-bible":"#bible-xuanyan","xuanyan-body":"#sec-xuanyan-body","xuanyan-face":"#sec-xuanyan-face","xuanyan-expr":"#sec-xuanyan-expr"};
 var offsets={};
 function updateOffsets(){for(var k in sectionMap){if(sectionMap[k]===0){offsets[k]=0}else{var el=document.querySelector(sectionMap[k]);offsets[k]=el?el.offsetTop-120:99999}}}
 function setActive(nav){navLinks.forEach(function(l){l.classList.remove("active")});var t=document.querySelector('.sidebar-nav a[data-nav="'+nav+'"]');if(t)t.classList.add("active")}
