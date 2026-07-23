@@ -142,6 +142,7 @@ body{background:#0a0a14;color:#ede4d4;font-family:"PingFang SC","Noto Serif SC",
 <div class="nav-major">王玄晏</div>
 <a href="#sec-xuanyan-body" data-nav="xuanyan-body">🦊 王玄晏全身</a>
 <a href="#sec-xuanyan-face" data-nav="xuanyan-face">🦊 王玄晏面部</a>
+<a href="#sec-xuanyan-expr" data-nav="xuanyan-expr">😶 王玄晏表情</a>
 </div>
 </nav>
 
@@ -152,7 +153,7 @@ body{background:#0a0a14;color:#ede4d4;font-family:"PingFang SC","Noto Serif SC",
 <header class="hero">
 <p class="ep-title">狐祖归来 · EP01</p>
 <h1>狐 祖 归 来</h1>
-<p class="subtitle">雪娘 · 临渊 · 玄晏 造型图集 · 四十六图</p>
+<p class="subtitle">雪娘 · 临渊 · 玄晏 造型图集 · 五十八图</p>
 </header>
 
 <!-- ═══════ 守灯造型 ═══════ -->
@@ -360,7 +361,7 @@ body{background:#0a0a14;color:#ede4d4;font-family:"PingFang SC","Noto Serif SC",
 <div class="lb-info" id="lbInfo"></div>
 <span class="lb-nav lb-next" id="lbNext">&#8250;</span>
 </div>
-<div class="footer">狐祖归来 · 雪娘 · 临渊 · 玄晏 · 四十六造型图</div>
+<div class="footer">狐祖归来 · 雪娘 · 临渊 · 玄晏 · 五十八造型图</div>
 
 </div><!-- /.main-wrapper -->
 
@@ -384,7 +385,7 @@ document.querySelectorAll(".sidebar-nav a").forEach(function(a){a.addEventListen
 
 // ── Scroll spy ──
 var navLinks=document.querySelectorAll(".sidebar-nav a[data-nav]");
-var sectionMap={"top":0,"bible-lamp":"#bible-lamp","angles":"#sec-angles","fullbody":"#sec-fullbody","ritual-bible":"#bible-ritual","ritual":"#sec-ritual","awaken-bible":"#bible-awaken","awaken":"#sec-awaken","normal-bible":"#bible-normal","normal":"#sec-normal","linyuan":"#sec-linyuan","xuanyan-body":"#sec-xuanyan-body","xuanyan-face":"#sec-xuanyan-face"};
+var sectionMap={"top":0,"bible-lamp":"#bible-lamp","angles":"#sec-angles","fullbody":"#sec-fullbody","ritual-bible":"#bible-ritual","ritual":"#sec-ritual","awaken-bible":"#bible-awaken","awaken":"#sec-awaken","normal-bible":"#bible-normal","normal":"#sec-normal","linyuan":"#sec-linyuan","xuanyan-body":"#sec-xuanyan-body","xuanyan-face":"#sec-xuanyan-face","xuanyan-expr":"#sec-xuanyan-expr"};
 var offsets={};
 function updateOffsets(){for(var k in sectionMap){if(sectionMap[k]===0){offsets[k]=0}else{var el=document.querySelector(sectionMap[k]);offsets[k]=el?el.offsetTop-120:99999}}}
 function setActive(nav){navLinks.forEach(function(l){l.classList.remove("active")});var t=document.querySelector('.sidebar-nav a[data-nav="'+nav+'"]');if(t)t.classList.add("active")}
@@ -454,12 +455,26 @@ const scenes=[
 {file:"狐祖归来_王玄晏_左侧45度.png",name:"玄晏 · 左侧45度",script:"玄晏左45°——微侧间流露掌权者的隐忍与算计",section:"🦊 王玄晏面部"},
 {file:"狐祖归来_王玄晏_右侧45度.png",name:"玄晏 · 右侧45度",script:"玄晏右45°——眼神微睨，狐族权谋尽在不言",section:"🦊 王玄晏面部"},
 {file:"狐祖归来_王玄晏_俯视角度.png",name:"玄晏 · 俯视角度",script:"玄晏俯视——冠顶与肩甲结构，俯瞰众生",section:"🦊 王玄晏面部"},
-{file:"狐祖归来_王玄晏_仰视角度.png",name:"玄晏 · 仰视角度",script:"玄晏仰视——下颌线条与眼神的高位威压",section:"🦊 王玄晏面部"}
+{file:"狐祖归来_王玄晏_仰视角度.png",name:"玄晏 · 仰视角度",script:"玄晏仰视——下颌线条与眼神的高位威压",section:"🦊 王玄晏面部"},
+
+// ── 王玄晏表情 ──
+{file:"狐祖归来_王玄晏_默认状态.png",name:"玄晏 · 默认状态",script:"王玄晏默认表情——不动如山，深不可测",section:"😶 王玄晏表情"},
+{file:"狐祖归来_王玄晏_轻微微笑.png",name:"玄晏 · 轻微微笑",script:"嘴角微扬——权谋者的克制笑意，令人不寒而栗",section:"😶 王玄晏表情"},
+{file:"狐祖归来_王玄晏_愤怒.png",name:"玄晏 · 愤怒",script:"眉头紧锁，目光如刃——白狐家主的雷霆之怒",section:"😶 王玄晏表情"},
+{file:"狐祖归来_王玄晏_悲伤.png",name:"玄晏 · 悲伤",script:"眉宇间难掩的隐痛——权力背后的孤独",section:"😶 王玄晏表情"},
+{file:"狐祖归来_王玄晏_恐惧.png",name:"玄晏 · 恐惧",script:"瞳孔微缩——面对未知威胁的瞬间动摇",section:"😶 王玄晏表情"},
+{file:"狐祖归来_王玄晏_惊讶.png",name:"玄晏 · 惊讶",script:"挑眉睁目——意料之外的冲击",section:"😶 王玄晏表情"},
+{file:"狐祖归来_王玄晏_疑惑.png",name:"玄晏 · 疑惑",script:"微微侧目——狐疑与试探",section:"😶 王玄晏表情"},
+{file:"狐祖归来_王玄晏_思考.png",name:"玄晏 · 思考",script:"垂眸沉思——权谋的棋局在脑中展开",section:"😶 王玄晏表情"},
+{file:"狐祖归来_王玄晏_犹豫.png",name:"玄晏 · 犹豫",script:"唇线紧抿——决策前的摇摆",section:"😶 王玄晏表情"},
+{file:"狐祖归来_王玄晏_压力状态.png",name:"玄晏 · 压力状态",script:"额角微汗——重压之下的隐忍",section:"😶 王玄晏表情"},
+{file:"狐祖归来_王玄晏_释然.png",name:"玄晏 · 释然",script:"眉头舒展——放下重担的片刻松弛",section:"😶 王玄晏表情"},
+{file:"狐祖归来_王玄晏_角色招牌.png",name:"玄晏 · 角色招牌",script:"王玄晏标志性神情——冷峻、掌控、不可撼动的家主气场",section:"😶 王玄晏表情"}
 ];
 
 const root=document.getElementById("content-root");
 const doneSections=new Set();
-const secIds={"📐 多角度视图":"sec-angles","👘 全身与姿态":"sec-fullbody","🙏 祭祀造型":"sec-ritual","⚡ 狐祖降临":"sec-awaken","👑 狐祖常态":"sec-normal","🌊 临渊面部":"sec-linyuan","🦊 王玄晏全身":"sec-xuanyan-body","🦊 王玄晏面部":"sec-xuanyan-face"};
+const secIds={"📐 多角度视图":"sec-angles","👘 全身与姿态":"sec-fullbody","🙏 祭祀造型":"sec-ritual","⚡ 狐祖降临":"sec-awaken","👑 狐祖常态":"sec-normal","🌊 临渊面部":"sec-linyuan","🦊 王玄晏全身":"sec-xuanyan-body","🦊 王玄晏面部":"sec-xuanyan-face","😶 王玄晏表情":"sec-xuanyan-expr"};
 scenes.forEach((sc,i)=>{
 const sec=sc.section;
 if(!doneSections.has(sec)){
