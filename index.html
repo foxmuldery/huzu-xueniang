@@ -132,6 +132,7 @@ body{background:#0a0a14;color:#ede4d4;font-family:"PingFang SC","Noto Serif SC",
 <a href="#bible-ritual" data-nav="ritual-bible">祭祀造型圣经</a>
 <a href="#sec-ritual" data-nav="ritual">🙏 祭祀造型</a>
 <div class="nav-major">狐祖降临</div>
+<a href="#bible-awaken" data-nav="awaken-bible">狐祖降临圣经</a>
 <a href="#sec-awaken" data-nav="awaken">⚡ 狐祖降临</a>
 </div>
 </nav>
@@ -242,7 +243,7 @@ body{background:#0a0a14;color:#ede4d4;font-family:"PingFang SC","Noto Serif SC",
 <!-- ═══════ 狐祖降临 ═══════ -->
 <div class="cat-divider"><div class="line"></div><span class="cat-label">狐 祖 降 临</span><div class="line"></div></div>
 
-<div class="bible-core">
+<div class="bible-core" id="bible-awaken">
 <div class="bible-definition">她打破了奉献与顺从的枷锁，将体内妖力彻底爆发。<br>破损白纱缠绕<em>暗红血脉网络</em>，蛛网晶石头纱下<em>荧光紫瞳</em>冷艳逼人。</div>
 <div class="bible-tones">
 <span class="bible-tone">血脉</span><span class="bible-tone">蛛网</span><span class="bible-tone">金爪</span><span class="bible-tone">紫瞳</span>
@@ -311,7 +312,7 @@ document.querySelectorAll(".sidebar-nav a").forEach(function(a){a.addEventListen
 
 // ── Scroll spy ──
 var navLinks=document.querySelectorAll(".sidebar-nav a[data-nav]");
-var sectionMap={"top":0,"bible-lamp":"#bible-lamp","angles":"#sec-angles","fullbody":"#sec-fullbody","ritual-bible":"#bible-ritual","ritual":"#sec-ritual","awaken":"#sec-awaken"};
+var sectionMap={"top":0,"bible-lamp":"#bible-lamp","angles":"#sec-angles","fullbody":"#sec-fullbody","ritual-bible":"#bible-ritual","ritual":"#sec-ritual","awaken-bible":"#bible-awaken","awaken":"#sec-awaken"};
 var offsets={};
 function updateOffsets(){for(var k in sectionMap){if(sectionMap[k]===0){offsets[k]=0}else{var el=document.querySelector(sectionMap[k]);offsets[k]=el?el.offsetTop-120:99999}}}
 function setActive(nav){navLinks.forEach(function(l){l.classList.remove("active")});var t=document.querySelector('.sidebar-nav a[data-nav="'+nav+'"]');if(t)t.classList.add("active")}
