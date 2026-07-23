@@ -131,8 +131,8 @@ body{background:#0a0a14;color:#ede4d4;font-family:"PingFang SC","Noto Serif SC",
 <div class="nav-major">祭祀造型</div>
 <a href="#bible-ritual" data-nav="ritual-bible">祭祀造型圣经</a>
 <a href="#sec-ritual" data-nav="ritual">🙏 祭祀造型</a>
-<div class="nav-major">觉醒造型</div>
-<a href="#sec-awaken" data-nav="awaken">⚡ 觉醒造型</a>
+<div class="nav-major">狐祖降临</div>
+<a href="#sec-awaken" data-nav="awaken">⚡ 狐祖降临</a>
 </div>
 </nav>
 
@@ -239,8 +239,8 @@ body{background:#0a0a14;color:#ede4d4;font-family:"PingFang SC","Noto Serif SC",
 </div>
 </div>
 
-<!-- ═══════ 觉醒造型 ═══════ -->
-<div class="cat-divider"><div class="line"></div><span class="cat-label">觉 醒 造 型</span><div class="line"></div></div>
+<!-- ═══════ 狐祖降临 ═══════ -->
+<div class="cat-divider"><div class="line"></div><span class="cat-label">狐 祖 降 临</span><div class="line"></div></div>
 
 <div class="bible-core">
 <div class="bible-definition">她打破了奉献与顺从的枷锁，将体内妖力彻底爆发。<br>破损白纱缠绕<em>暗红血脉网络</em>，蛛网晶石头纱下<em>荧光紫瞳</em>冷艳逼人。</div>
@@ -345,16 +345,16 @@ const scenes=[
 {file:"祭祀_狐祖归来_雪娘_特写细节.png",name:"祭祀 · 特写细节",script:"祭祀妆面与祭器特写——祭纹、古银饰、仪式妆容，锁住神圣感的每一处细节",section:"🙏 祭祀造型"},
 
 // ── 觉醒造型 ──
-{file:"觉醒_狐祖归来_雪娘_正面全身.png",name:"觉醒 · 正面全身",script:"破封觉醒正面——破损月白长裙被暗红血脉网络缠绕，蛛网晶石头纱垂落，荧光紫瞳直视前方",section:"⚡ 觉醒造型"},
-{file:"觉醒_狐祖归来_雪娘_背面全身.png",name:"觉醒 · 背面全身",script:"觉醒背面——血脉脉络延脊背蔓延至全身，头纱晶石在暗色背景下闪烁如星轨",section:"⚡ 觉醒造型"},
-{file:"觉醒_狐祖归来_雪娘_侧面全身.png",name:"觉醒 · 侧面全身",script:"觉醒侧面——金色尖爪与赤足可见，破损白纱与缠绕红脉形成堕落之美",section:"⚡ 觉醒造型"},
-{file:"觉醒_狐祖归来_雪娘_动态站姿.png",name:"觉醒 · 动态站姿",script:"觉醒动态——赤足前行，晶石头纱在风中飘散，金爪张开如织网诱捕，裙摆高扬",section:"⚡ 觉醒造型"},
-{file:"觉醒_狐祖归来_雪娘_特写细节.png",name:"觉醒 · 特写细节",script:"觉醒细节特写——蛛网晶石节点、暗红血脉纹路、金色利爪、荧光紫瞳，捕捉妖化每一处精微",section:"⚡ 觉醒造型"}
+{file:"觉醒_狐祖归来_雪娘_正面全身.png",name:"觉醒 · 正面全身",script:"破封觉醒正面——破损月白长裙被暗红血脉网络缠绕，蛛网晶石头纱垂落，荧光紫瞳直视前方",section:"⚡ 狐祖降临"},
+{file:"觉醒_狐祖归来_雪娘_背面全身.png",name:"觉醒 · 背面全身",script:"觉醒背面——血脉脉络延脊背蔓延至全身，头纱晶石在暗色背景下闪烁如星轨",section:"⚡ 狐祖降临"},
+{file:"觉醒_狐祖归来_雪娘_侧面全身.png",name:"觉醒 · 侧面全身",script:"觉醒侧面——金色尖爪与赤足可见，破损白纱与缠绕红脉形成堕落之美",section:"⚡ 狐祖降临"},
+{file:"觉醒_狐祖归来_雪娘_动态站姿.png",name:"觉醒 · 动态站姿",script:"觉醒动态——赤足前行，晶石头纱在风中飘散，金爪张开如织网诱捕，裙摆高扬",section:"⚡ 狐祖降临"},
+{file:"觉醒_狐祖归来_雪娘_特写细节.png",name:"觉醒 · 特写细节",script:"觉醒细节特写——蛛网晶石节点、暗红血脉纹路、金色利爪、荧光紫瞳，捕捉妖化每一处精微",section:"⚡ 狐祖降临"}
 ];
 
 const root=document.getElementById("content-root");
 const doneSections=new Set();
-const secIds={"📐 多角度视图":"sec-angles","👘 全身与姿态":"sec-fullbody","🙏 祭祀造型":"sec-ritual","⚡ 觉醒造型":"sec-awaken"};
+const secIds={"📐 多角度视图":"sec-angles","👘 全身与姿态":"sec-fullbody","🙏 祭祀造型":"sec-ritual","⚡ 狐祖降临":"sec-awaken"};
 scenes.forEach((sc,i)=>{
 const sec=sc.section;
 if(!doneSections.has(sec)){
