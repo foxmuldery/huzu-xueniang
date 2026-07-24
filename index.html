@@ -152,6 +152,7 @@ body{background:#0a0a14;color:#ede4d4;font-family:"PingFang SC","Noto Serif SC",
 <a href="#sec-atan-body" data-nav="atan-body">🦊 阿檀全身</a>
 <div class="nav-major">王嵩</div>
 <a href="#sec-wangsong" data-nav="wangsong">🦊 王嵩</a>
+<a href="#bible-wangsong" data-nav="wangsong-bible">白狐长老圣经</a>
 </div>
 </nav>
 
@@ -469,10 +470,40 @@ body{background:#0a0a14;color:#ede4d4;font-family:"PingFang SC","Noto Serif SC",
 </div>
 
 <!-- ═══════ 王嵩 ═══════ -->
-<div class="cat-divider"><div class="line"></div><span class="cat-label">王 嵩</span><div class="line"></div></div>
+<div class="cat-divider" id="bible-wangsong"><div class="line"></div><span class="cat-label">王 嵩</span><div class="line"></div></div>
 
 <div class="bible-core">
 <div class="bible-definition">青丘白狐。<br><em>王嵩</em>——白狐正堂执事，雪娘的庇护与审判之间。</div>
+<button class="bible-toggle" id="bibleWangToggle" onclick="toggleWangBible()">▸ 查阅白狐长老造型圣经</button>
+<div class="bible-detail" id="bibleWangDetail">
+<h3>一、角色定位</h3>
+<p>王嵩是白狐一族旧秩序的活化石。视觉定位：东方白狐王庭长老 × 东正教大长老仪式感 × 古老狐族文明权威。</p>
+<blockquote>像一具披着银白祭袍的古老狐族遗骸，仍掌握整个族群的生杀权。</blockquote>
+
+<h3>二、整体气质</h3>
+<p>古老、威严、清冷、神圣、非人感、贵族祭司、历史沉淀。</p>
+
+<h3>三、面部设计</h3>
+<p>高龄东亚男性骨相。颧骨突出，眉骨明显，眼窝深陷，面颊消瘦，真实老人皱纹。灰蓝色瞳孔，冷静深邃，审判感。银白色极长稀疏胡须，形成仪式化轮廓。</p>
+
+<h3>四、狐族非人特征</h3>
+<p>微尖狐耳比普通人耳略长，不是精灵尖耳不兽化，表现为拥有狐族血脉的高阶妖族。</p>
+
+<h3>五、头饰与服装</h3>
+<p><strong>白狐长老祭冠：</strong>东正教大长老帽型与东方狐族祭冠结合，银白材质高而窄，白色宝石、暗红宝石、银色浮雕，九尾抽象纹和狐族祖纹。<strong>服装：</strong>银白、象牙白为主，红褐暗纹暗银为辅。多层长袍、宽袖、拖地礼服、仪式披挂。</p>
+
+<h3>六、狐祖权杖</h3>
+<p>黑银色古老权杖，顶部银色浮雕狐狸轮廓不做完整兽头。材质：古银、黑曜石、白玉。像世代传承的狐族祖器。</p>
+
+<h3>七、手部设计</h3>
+<p>干瘦苍白青筋明显，手指细长。指甲细长锐利保持妖族特征，不过度怪物化。</p>
+
+<h3>八、色彩与摄影</h3>
+<p>80%冷色（银白、灰蓝、黑灰），20%暖色（暗红、烛光）。电影级真人影视定妆照，低饱和、深背景、强轮廓光。</p>
+
+<h3>九、最终视觉描述</h3>
+<blockquote>王嵩是一位活了数百年的白狐族大长老。他身穿银白祭礼长袍，戴古老狐族祭冠，持黑银狐祖权杖。灰蓝色双眼隐藏着漫长岁月积累的智慧与威严。他代表狐族最后的旧秩序，是一座仍然守护血脉文明的古老王朝。</blockquote>
+</div>
 </div>
 
 <div id="content-root"></div>
@@ -507,6 +538,7 @@ function toggleAwakenBible(){var d=document.getElementById("bibleAwakenDetail"),
 function toggleNormalBible(){var d=document.getElementById("bibleNormalDetail"),b=document.getElementById("bibleNormalToggle");if(d.classList.contains("active")){d.classList.remove("active");b.innerHTML="▸ 查阅狐祖常态造型圣经"}else{d.classList.add("active");b.innerHTML="▾ 收起狐祖常态造型圣经";d.scrollIntoView({behavior:"smooth",block:"nearest"})}}
 function toggleXuanyanBible(){var d=document.getElementById("bibleXuanyanDetail"),b=document.getElementById("bibleXuanyanToggle");if(d.classList.contains("active")){d.classList.remove("active");b.innerHTML="▸ 查阅白狐少主造型圣经"}else{d.classList.add("active");b.innerHTML="▾ 收起白狐少主造型圣经";d.scrollIntoView({behavior:"smooth",block:"nearest"})}}
 function toggleRitualXuanBible(){var d=document.getElementById("bibleRitualXuanDetail"),b=document.getElementById("bibleRitualXuanToggle");if(d.classList.contains("active")){d.classList.remove("active");b.innerHTML="▸ 查阅飞升祭服造型圣经"}else{d.classList.add("active");b.innerHTML="▾ 收起飞升祭服造型圣经";d.scrollIntoView({behavior:"smooth",block:"nearest"})}}
+function toggleWangBible(){var d=document.getElementById("bibleWangDetail"),b=document.getElementById("bibleWangToggle");if(d.classList.contains("active")){d.classList.remove("active");b.innerHTML="▸ 查阅白狐长老造型圣经"}else{d.classList.add("active");b.innerHTML="▾ 收起白狐长老造型圣经";d.scrollIntoView({behavior:"smooth",block:"nearest"})}}
 
 function toggleSidebar(){document.getElementById("sidebar").classList.toggle("open")}
 
@@ -516,7 +548,7 @@ document.querySelectorAll(".sidebar-nav a").forEach(function(a){a.addEventListen
 
 // ── Scroll spy ──
 var navLinks=document.querySelectorAll(".sidebar-nav a[data-nav]");
-var sectionMap={"top":0,"bible-common":"#bible-common","bible-lamp":"#bible-lamp","angles":"#sec-angles","fullbody":"#sec-fullbody","ritual-bible":"#bible-ritual","ritual":"#sec-ritual","awaken-bible":"#bible-awaken","awaken":"#sec-awaken","normal-bible":"#bible-normal","normal":"#sec-normal","linyuan":"#sec-linyuan","xuanyan-bible":"#bible-xuanyan","xuanyan-body":"#sec-xuanyan-body","xuanyan-face":"#sec-xuanyan-face","xuanyan-expr":"#sec-xuanyan-expr","xuanyan-ritual":"#sec-xuanyan-ritual","atan-face":"#sec-atan-face","atan-body":"#sec-atan-body","wangsong":"#sec-wangsong"};
+var sectionMap={"top":0,"bible-common":"#bible-common","bible-lamp":"#bible-lamp","angles":"#sec-angles","fullbody":"#sec-fullbody","ritual-bible":"#bible-ritual","ritual":"#sec-ritual","awaken-bible":"#bible-awaken","awaken":"#sec-awaken","normal-bible":"#bible-normal","normal":"#sec-normal","linyuan":"#sec-linyuan","xuanyan-bible":"#bible-xuanyan","xuanyan-body":"#sec-xuanyan-body","xuanyan-face":"#sec-xuanyan-face","xuanyan-expr":"#sec-xuanyan-expr","xuanyan-ritual":"#sec-xuanyan-ritual","atan-face":"#sec-atan-face","atan-body":"#sec-atan-body","wangsong":"#sec-wangsong","wangsong-bible":"#bible-wangsong"};
 var offsets={};
 function updateOffsets(){for(var k in sectionMap){if(sectionMap[k]===0){offsets[k]=0}else{var el=document.querySelector(sectionMap[k]);offsets[k]=el?el.offsetTop-120:99999}}}
 function setActive(nav){navLinks.forEach(function(l){l.classList.remove("active")});var t=document.querySelector('.sidebar-nav a[data-nav="'+nav+'"]');if(t)t.classList.add("active")}
