@@ -125,6 +125,7 @@ body{background:#0a0a14;color:#ede4d4;font-family:"PingFang SC","Noto Serif SC",
 </div>
 <div class="sidebar-nav">
 <a href="#top" class="active" data-nav="top">▸ 页面顶部</a>
+<a href="#bible-common" data-nav="bible-common">狐族常态圣经</a>
 <div class="nav-major">王雪娘</div>
 <a href="#bible-lamp" data-nav="bible-lamp" class="nav-sub">守灯造型圣经</a>
 <a href="#sec-angles" data-nav="angles" class="nav-sub">📐 多角度视图</a>
@@ -155,6 +156,36 @@ body{background:#0a0a14;color:#ede4d4;font-family:"PingFang SC","Noto Serif SC",
 <h1>狐 祖 归 来</h1>
 <p class="subtitle">雪娘 · 临渊 · 玄晏 造型图集 · 六十三图</p>
 </header>
+
+<!-- ═══════ 狐族常态圣经 ═══════ -->
+<div class="bible-core" id="bible-common">
+<button class="bible-toggle" id="bibleCommonToggle" onclick="toggleCommonBible()">▸ 查阅狐族常态造型圣经</button>
+<div class="bible-detail" id="bibleCommonDetail">
+<h3>一、模块定位</h3>
+<p>本文件定义《狐祖归来》中狐族角色在"常态人形"状态下的身体异化标准。核心原则：<strong>先狐后人。</strong>狐性不通过廉价符号表达，而通过耳朵、指甲、眼神、身体比例、动作习惯、微小非人细节。</p>
+
+<h3>二、C方案：战斗狐耳</h3>
+<p>比普通人耳增加15%-30%。耳尖明显、向上延展、轮廓锐利、耳廓薄、与头部自然连接。不是兽耳装饰或二次元狐娘耳，而是人类耳朵自然进化出的狐族器官。常态80%可见，通过发型饰品角度控制妖感。</p>
+
+<h3>三、C方案：捕猎狐爪</h3>
+<p>标准长度12-15mm。尖端收窄、锥形、微向下弯、优雅弧度。关键词：危险、性感、攻击性、贵族感。不是美甲，而是人形身体中隐藏的捕猎武器。</p>
+
+<h3>四、五狐角色规范</h3>
+<ul>
+<li><strong>雪娘·狐祖：</strong>最低妖化，玉白指甲、赤金瞳孔变化、耳尖隐藏发间</li>
+<li><strong>王玄晏·白狐：</strong>冰白银灰月色，最克制，魅惑来自距离感</li>
+<li><strong>赤离·赤狐：</strong>暗红朱砂，攻击性最高，手指动作成为表演语言</li>
+<li><strong>临渊·泽狐：</strong>青黑湿润银，半透明水汽感，魅惑如沼泽</li>
+<li><strong>阿檀·藏狐：</strong>深棕岩石色，弱化攻击性，狐耳减20%，可靠守护者</li>
+</ul>
+
+<h3>五、审核标准</h3>
+<p>所有狐族常态造型必须满足：①是否仍然是美的人形？②是否一眼区别于普通古装人物？③是否没有廉价狐妖符号？④是否具有危险魅惑？⑤是否属于同一个狐族文明？</p>
+
+<h3>六、最终视觉定义</h3>
+<blockquote>《狐祖归来》的狐族不是"人穿狐狸"，而是"狐狸进化成人"。他们拥有人的智慧、美貌和情感，但耳尖、爪尖、凝视和动作，永远提醒观众：他们来自另一个文明。</blockquote>
+</div>
+</div>
 
 <!-- ═══════ 守灯造型 ═══════ -->
 <div class="cat-divider" id="bible-lamp"><div class="line"></div><span class="cat-label">守 灯 造 型</span><div class="line"></div></div>
@@ -442,6 +473,8 @@ async function sha256(t){const e=new TextEncoder().encode(t),h=await crypto.subt
 async function checkPw(){var p=document.getElementById("pwInput").value;if(!p)return;var h=await sha256(p);if(h===PW_HASH){document.getElementById("pwGate").classList.add("hidden");sessionStorage.setItem("huzu_auth","1");document.getElementById("pwErr").style.display="none"}else{document.getElementById("pwErr").style.display="block";document.getElementById("pwInput").value=""}}
 if(sessionStorage.getItem("huzu_auth")==="1")document.getElementById("pwGate").classList.add("hidden")
 
+function toggleCommonBible(){var d=document.getElementById("bibleCommonDetail"),b=document.getElementById("bibleCommonToggle");if(d.classList.contains("active")){d.classList.remove("active");b.innerHTML="▸ 查阅狐族常态造型圣经"}else{d.classList.add("active");b.innerHTML="▾ 收起狐族常态造型圣经";d.scrollIntoView({behavior:"smooth",block:"nearest"})}}
+
 function toggleBible(){var d=document.getElementById("bibleDetail"),b=document.getElementById("bibleToggle");if(d.classList.contains("active")){d.classList.remove("active");b.innerHTML="▸ 查阅守灯造型圣经"}else{d.classList.add("active");b.innerHTML="▾ 收起守灯造型圣经";d.scrollIntoView({behavior:"smooth",block:"nearest"})}}
 function toggleRitualBible(){var d=document.getElementById("bibleRitualDetail"),b=document.getElementById("bibleRitualToggle");if(d.classList.contains("active")){d.classList.remove("active");b.innerHTML="▸ 查阅祭祀造型圣经"}else{d.classList.add("active");b.innerHTML="▾ 收起祭祀造型圣经";d.scrollIntoView({behavior:"smooth",block:"nearest"})}}
 function toggleAwakenBible(){var d=document.getElementById("bibleAwakenDetail"),b=document.getElementById("bibleAwakenToggle");if(d.classList.contains("active")){d.classList.remove("active");b.innerHTML="▸ 查阅狐祖降临造型圣经"}else{d.classList.add("active");b.innerHTML="▾ 收起狐祖降临造型圣经";d.scrollIntoView({behavior:"smooth",block:"nearest"})}}
@@ -457,7 +490,7 @@ document.querySelectorAll(".sidebar-nav a").forEach(function(a){a.addEventListen
 
 // ── Scroll spy ──
 var navLinks=document.querySelectorAll(".sidebar-nav a[data-nav]");
-var sectionMap={"top":0,"bible-lamp":"#bible-lamp","angles":"#sec-angles","fullbody":"#sec-fullbody","ritual-bible":"#bible-ritual","ritual":"#sec-ritual","awaken-bible":"#bible-awaken","awaken":"#sec-awaken","normal-bible":"#bible-normal","normal":"#sec-normal","linyuan":"#sec-linyuan","xuanyan-bible":"#bible-xuanyan","xuanyan-body":"#sec-xuanyan-body","xuanyan-face":"#sec-xuanyan-face","xuanyan-expr":"#sec-xuanyan-expr","xuanyan-ritual":"#sec-xuanyan-ritual"};
+var sectionMap={"top":0,"bible-common":"#bible-common","bible-lamp":"#bible-lamp","angles":"#sec-angles","fullbody":"#sec-fullbody","ritual-bible":"#bible-ritual","ritual":"#sec-ritual","awaken-bible":"#bible-awaken","awaken":"#sec-awaken","normal-bible":"#bible-normal","normal":"#sec-normal","linyuan":"#sec-linyuan","xuanyan-bible":"#bible-xuanyan","xuanyan-body":"#sec-xuanyan-body","xuanyan-face":"#sec-xuanyan-face","xuanyan-expr":"#sec-xuanyan-expr","xuanyan-ritual":"#sec-xuanyan-ritual"};
 var offsets={};
 function updateOffsets(){for(var k in sectionMap){if(sectionMap[k]===0){offsets[k]=0}else{var el=document.querySelector(sectionMap[k]);offsets[k]=el?el.offsetTop-120:99999}}}
 function setActive(nav){navLinks.forEach(function(l){l.classList.remove("active")});var t=document.querySelector('.sidebar-nav a[data-nav="'+nav+'"]');if(t)t.classList.add("active")}
