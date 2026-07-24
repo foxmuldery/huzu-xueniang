@@ -150,6 +150,8 @@ body{background:#0a0a14;color:#ede4d4;font-family:"PingFang SC","Noto Serif SC",
 <div class="nav-major">阿檀·藏狐</div>
 <a href="#sec-atan-face" data-nav="atan-face">🦊 阿檀面部</a>
 <a href="#sec-atan-body" data-nav="atan-body">🦊 阿檀全身</a>
+<div class="nav-major">王嵩</div>
+<a href="#sec-wangsong" data-nav="wangsong">🦊 王嵩</a>
 </div>
 </nav>
 
@@ -160,7 +162,7 @@ body{background:#0a0a14;color:#ede4d4;font-family:"PingFang SC","Noto Serif SC",
 <header class="hero">
 <p class="ep-title">狐祖归来 · EP01</p>
 <h1>狐 祖 归 来</h1>
-<p class="subtitle">雪娘 · 临渊 · 玄晏 · 阿檀 造型图集 · 七十五图</p>
+<p class="subtitle">雪娘 · 临渊 · 玄晏 · 阿檀 造型图集 · 八十图</p>
 </header>
 
 <!-- ═══════ 狐族常态圣经 ═══════ -->
@@ -466,6 +468,13 @@ body{background:#0a0a14;color:#ede4d4;font-family:"PingFang SC","Noto Serif SC",
 <div class="bible-definition">土地、温暖、守护。<br><em>阿檀</em>——藏狐一脉，不是攻击者，而是可靠的守护者。</div>
 </div>
 
+<!-- ═══════ 王嵩 ═══════ -->
+<div class="cat-divider"><div class="line"></div><span class="cat-label">王 嵩</span><div class="line"></div></div>
+
+<div class="bible-core">
+<div class="bible-definition">青丘白狐。<br><em>王嵩</em>——白狐正堂执事，雪娘的庇护与审判之间。</div>
+</div>
+
 <div id="content-root"></div>
 
 <div class="lightbox" id="lightbox">
@@ -479,7 +488,7 @@ body{background:#0a0a14;color:#ede4d4;font-family:"PingFang SC","Noto Serif SC",
 </div>
 <span class="lb-nav lb-next" id="lbNext">&#8250;</span>
 </div>
-<div class="footer">狐祖归来 · 雪娘 · 临渊 · 玄晏 · 阿檀 · 七十五造型图</div>
+<div class="footer">狐祖归来 · 雪娘 · 临渊 · 玄晏 · 阿檀 · 王嵩 · 八十造型图</div>
 
 </div><!-- /.main-wrapper -->
 
@@ -507,7 +516,7 @@ document.querySelectorAll(".sidebar-nav a").forEach(function(a){a.addEventListen
 
 // ── Scroll spy ──
 var navLinks=document.querySelectorAll(".sidebar-nav a[data-nav]");
-var sectionMap={"top":0,"bible-common":"#bible-common","bible-lamp":"#bible-lamp","angles":"#sec-angles","fullbody":"#sec-fullbody","ritual-bible":"#bible-ritual","ritual":"#sec-ritual","awaken-bible":"#bible-awaken","awaken":"#sec-awaken","normal-bible":"#bible-normal","normal":"#sec-normal","linyuan":"#sec-linyuan","xuanyan-bible":"#bible-xuanyan","xuanyan-body":"#sec-xuanyan-body","xuanyan-face":"#sec-xuanyan-face","xuanyan-expr":"#sec-xuanyan-expr","xuanyan-ritual":"#sec-xuanyan-ritual","atan-face":"#sec-atan-face","atan-body":"#sec-atan-body"};
+var sectionMap={"top":0,"bible-common":"#bible-common","bible-lamp":"#bible-lamp","angles":"#sec-angles","fullbody":"#sec-fullbody","ritual-bible":"#bible-ritual","ritual":"#sec-ritual","awaken-bible":"#bible-awaken","awaken":"#sec-awaken","normal-bible":"#bible-normal","normal":"#sec-normal","linyuan":"#sec-linyuan","xuanyan-bible":"#bible-xuanyan","xuanyan-body":"#sec-xuanyan-body","xuanyan-face":"#sec-xuanyan-face","xuanyan-expr":"#sec-xuanyan-expr","xuanyan-ritual":"#sec-xuanyan-ritual","atan-face":"#sec-atan-face","atan-body":"#sec-atan-body","wangsong":"#sec-wangsong"};
 var offsets={};
 function updateOffsets(){for(var k in sectionMap){if(sectionMap[k]===0){offsets[k]=0}else{var el=document.querySelector(sectionMap[k]);offsets[k]=el?el.offsetTop-120:99999}}}
 function setActive(nav){navLinks.forEach(function(l){l.classList.remove("active")});var t=document.querySelector('.sidebar-nav a[data-nav="'+nav+'"]');if(t)t.classList.add("active")}
@@ -612,12 +621,19 @@ const scenes=[
 {file:"狐祖归来_阿檀_背面全身.png",name:"阿檀 · 背面全身",script:"阿檀全身背面——背影如山，温暖的防线",section:"🦊 阿檀全身"},
 {file:"狐祖归来_阿檀_侧面全身.png",name:"阿檀 · 侧面全身",script:"阿檀全身侧面——身姿厚实，藏狐一脉的质朴力量",section:"🦊 阿檀全身"},
 {file:"狐祖归来_阿檀_动态站姿.png",name:"阿檀 · 动态站姿",script:"阿檀动态——步伐沉稳，双手微抬的守护姿态",section:"🦊 阿檀全身"},
-{file:"狐祖归来_阿檀_特写细节.png",name:"阿檀 · 特写细节",script:"阿檀细节——岩石色指甲、藏狐耳型、朴实衣纹与大地质感",section:"🦊 阿檀全身"}
+{file:"狐祖归来_阿檀_特写细节.png",name:"阿檀 · 特写细节",script:"阿檀细节——岩石色指甲、藏狐耳型、朴实衣纹与大地质感",section:"🦊 阿檀全身"},
+
+// ── 王嵩 ──
+{file:"狐祖归来_王嵩_正面全身.png",name:"王嵩 · 正面全身",script:"王嵩正面——白狐正堂执事，冷面之下藏着对雪娘的护佑",section:"🦊 王嵩"},
+{file:"狐祖归来_王嵩_背面全身.png",name:"王嵩 · 背面全身",script:"王嵩背面——宽厚背影，如雪庭中一堵挡风的墙",section:"🦊 王嵩"},
+{file:"狐祖归来_王嵩_侧面全身.png",name:"王嵩 · 侧面全身",script:"王嵩侧面——沉静侧颜，白狐执事的克制与隐忍",section:"🦊 王嵩"},
+{file:"狐祖归来_王嵩_动态站姿.png",name:"王嵩 · 动态站姿",script:"王嵩动态——衣袍微动，审判与保护的边界",section:"🦊 王嵩"},
+{file:"狐祖归来_王嵩_特写细节.png",name:"王嵩 · 特写细节",script:"王嵩细节——执事纹章、腰间令牌、面容细纹承载青丘秩序",section:"🦊 王嵩"}
 ];
 
 const root=document.getElementById("content-root");
 const doneSections=new Set();
-const secIds={"📐 多角度视图":"sec-angles","👘 全身与姿态":"sec-fullbody","🙏 祭祀造型":"sec-ritual","⚡ 狐祖降临":"sec-awaken","👑 狐祖常态":"sec-normal","🌊 临渊面部":"sec-linyuan","🦊 王玄晏全身":"sec-xuanyan-body","🦊 王玄晏面部":"sec-xuanyan-face","😶 王玄晏表情":"sec-xuanyan-expr","⛩️ 飞升祭服":"sec-xuanyan-ritual","🦊 阿檀面部":"sec-atan-face","🦊 阿檀全身":"sec-atan-body"};
+const secIds={"📐 多角度视图":"sec-angles","👘 全身与姿态":"sec-fullbody","🙏 祭祀造型":"sec-ritual","⚡ 狐祖降临":"sec-awaken","👑 狐祖常态":"sec-normal","🌊 临渊面部":"sec-linyuan","🦊 王玄晏全身":"sec-xuanyan-body","🦊 王玄晏面部":"sec-xuanyan-face","😶 王玄晏表情":"sec-xuanyan-expr","⛩️ 飞升祭服":"sec-xuanyan-ritual","🦊 阿檀面部":"sec-atan-face","🦊 阿檀全身":"sec-atan-body","🦊 王嵩":"sec-wangsong"};
 scenes.forEach((sc,i)=>{
 const sec=sc.section;
 if(!doneSections.has(sec)){
