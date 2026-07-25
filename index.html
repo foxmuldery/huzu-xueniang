@@ -22,7 +22,10 @@ body{background:#0a0a14;color:#ede4d4;font-family:"PingFang SC","Noto Serif SC",
 .bible-toggle{display:inline-block;font-size:14px;letter-spacing:.12em;color:rgba(180,150,100,.5);cursor:pointer;padding:8px 24px;border:1px solid rgba(180,150,100,.2);border-radius:4px;background:transparent;transition:all .25s;margin-bottom:8px}
 .bible-toggle:hover{color:rgba(220,190,130,.8);border-color:rgba(180,150,100,.4);background:rgba(180,150,100,.06)}
 
-.bible-detail{display:none;max-width:1100px;margin:20px auto 0;padding:28px 32px 40px;text-align:left;border:1px solid rgba(180,150,100,.15);border-radius:8px;background:rgba(15,18,28,.8);max-height:75vh;overflow-y:auto;-webkit-overflow-scrolling:touch}
+.bible-detail{display:none;max-width:1100px;margin:20px auto 0;padding:28px 32px 40px;text-align:left;border:1px solid rgba(180,150,100,.15);border-radius:8px;background:rgba(15,18,28,.8);max-height:75vh;overflow-y:auto;-webkit-overflow-scrolling:touch;position:relative}
+.bible-detail .copy-btn{position:absolute;top:12px;right:16px;font-size:12px;letter-spacing:.08em;color:rgba(180,150,100,.4);cursor:pointer;border:1px solid rgba(180,150,100,.15);border-radius:3px;padding:4px 12px;background:transparent;transition:all .2s;font-family:inherit}
+.bible-detail .copy-btn:hover{color:rgba(220,190,130,.8);border-color:rgba(180,150,100,.4)}
+.bible-detail .copy-btn.copied{color:#7eb896;border-color:rgba(126,184,150,.4)}
 .bible-detail.active{display:block}
 .bible-detail h3{font-size:17px;font-weight:400;color:#e0d4b0;letter-spacing:.08em;margin:24px 0 10px;padding-bottom:6px;border-bottom:1px solid rgba(200,170,120,.15)}
 .bible-detail h3:first-child{margin-top:0}
@@ -541,6 +544,9 @@ function toggleRitualXuanBible(){var d=document.getElementById("bibleRitualXuanD
 function toggleWangBible(){var d=document.getElementById("bibleWangDetail"),b=document.getElementById("bibleWangToggle");if(d.classList.contains("active")){d.classList.remove("active");b.innerHTML="▸ 查阅白狐长老造型圣经"}else{d.classList.add("active");b.innerHTML="▾ 收起白狐长老造型圣经";d.scrollIntoView({behavior:"smooth",block:"nearest"})}}
 
 function toggleSidebar(){document.getElementById("sidebar").classList.toggle("open")}
+
+// ── Auto-add copy buttons to all bible-detail sections ──
+document.querySelectorAll(".bible-detail").forEach(function(d){var b=document.createElement("button");b.className="copy-btn";b.textContent="📋 复制";b.onclick=function(e){e.stopPropagation();var t=d.innerText.trim();navigator.clipboard.writeText(t).then(function(){b.textContent="✓ 已复制";b.classList.add("copied");setTimeout(function(){b.textContent="📋 复制";b.classList.remove("copied")},1500)})};d.appendChild(b)})
 
 function scrollToSection(id){document.querySelector(id).scrollIntoView({behavior:"smooth",block:"start"})}
 
