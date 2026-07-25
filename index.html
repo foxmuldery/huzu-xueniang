@@ -161,7 +161,8 @@ body{background:#0a0a14;color:#ede4d4;font-family:"PingFang SC","Noto Serif SC",
 <a href="#sec-qinghe-body" data-nav="qinghe-body">🦊 青禾全身</a>
 <a href="#sec-qinghe-expr" data-nav="qinghe-expr">😶 青禾表情</a>
 <div class="nav-major">白狐巡卫</div>
-<a href="#bible-guard" data-nav="guard-bible">巡卫造型圣经</a>
+<a href="#bible-guard" data-nav="guard-bible">巡卫与统领圣经</a>
+<a href="#sec-guard-regular" data-nav="guard-regular">🦊 白狐巡卫</a>
 <div class="nav-major">巡卫统领</div>
 <a href="#sec-guard" data-nav="guard">🦊 巡卫统领</a>
 <div class="nav-major">白狐狐侍</div>
@@ -177,7 +178,7 @@ body{background:#0a0a14;color:#ede4d4;font-family:"PingFang SC","Noto Serif SC",
 <header class="hero">
 <p class="ep-title">狐祖归来 · EP01</p>
 <h1>狐 祖 归 来</h1>
-<p class="subtitle">雪娘 · 临渊 · 玄晏 · 阿檀 造型图集 · 一百一十四图</p>
+<p class="subtitle">雪娘 · 临渊 · 玄晏 · 阿檀 造型图集 · 一百一十九图</p>
 </header>
 
 <!-- ═══════ 狐族常态圣经 ═══════ -->
@@ -595,7 +596,7 @@ body{background:#0a0a14;color:#ede4d4;font-family:"PingFang SC","Noto Serif SC",
 </div>
 <span class="lb-nav lb-next" id="lbNext">&#8250;</span>
 </div>
-<div class="footer">狐祖归来 · 雪娘 · 临渊 · 玄晏 · 阿檀 · 王嵩 · 青禾 · 巡卫 · 狐侍 · 一百一十四造型图</div>
+<div class="footer">狐祖归来 · 雪娘 · 临渊 · 玄晏 · 阿檀 · 王嵩 · 青禾 · 巡卫 · 统领 · 狐侍 · 一百一十九造型图</div>
 
 </div><!-- /.main-wrapper -->
 
@@ -629,7 +630,7 @@ document.querySelectorAll(".sidebar-nav a").forEach(function(a){a.addEventListen
 
 // ── Scroll spy ──
 var navLinks=document.querySelectorAll(".sidebar-nav a[data-nav]");
-var sectionMap={"top":0,"bible-common":"#bible-common","bible-lamp":"#bible-lamp","angles":"#sec-angles","fullbody":"#sec-fullbody","ritual-bible":"#bible-ritual","ritual":"#sec-ritual","awaken-bible":"#bible-awaken","awaken":"#sec-awaken","normal-bible":"#bible-normal","normal":"#sec-normal","linyuan":"#sec-linyuan","xuanyan-bible":"#bible-xuanyan","xuanyan-body":"#sec-xuanyan-body","xuanyan-face":"#sec-xuanyan-face","xuanyan-expr":"#sec-xuanyan-expr","xuanyan-ritual":"#sec-xuanyan-ritual","atan-face":"#sec-atan-face","atan-body":"#sec-atan-body","wangsong":"#sec-wangsong","wangsong-bible":"#bible-wangsong","qinghe-face":"#sec-qinghe-face","qinghe-body":"#sec-qinghe-body","qinghe-expr":"#sec-qinghe-expr","guard-bible":"#bible-guard","guard":"#sec-guard","hushi-bible":"#bible-hushi","hushi":"#sec-hushi"};
+var sectionMap={"top":0,"bible-common":"#bible-common","bible-lamp":"#bible-lamp","angles":"#sec-angles","fullbody":"#sec-fullbody","ritual-bible":"#bible-ritual","ritual":"#sec-ritual","awaken-bible":"#bible-awaken","awaken":"#sec-awaken","normal-bible":"#bible-normal","normal":"#sec-normal","linyuan":"#sec-linyuan","xuanyan-bible":"#bible-xuanyan","xuanyan-body":"#sec-xuanyan-body","xuanyan-face":"#sec-xuanyan-face","xuanyan-expr":"#sec-xuanyan-expr","xuanyan-ritual":"#sec-xuanyan-ritual","atan-face":"#sec-atan-face","atan-body":"#sec-atan-body","wangsong":"#sec-wangsong","wangsong-bible":"#bible-wangsong","qinghe-face":"#sec-qinghe-face","qinghe-body":"#sec-qinghe-body","qinghe-expr":"#sec-qinghe-expr","guard-bible":"#bible-guard","guard":"#sec-guard","guard-regular":"#sec-guard-regular","hushi-bible":"#bible-hushi","hushi":"#sec-hushi"};
 var offsets={};
 function updateOffsets(){for(var k in sectionMap){if(sectionMap[k]===0){offsets[k]=0}else{var el=document.querySelector(sectionMap[k]);offsets[k]=el?el.offsetTop-120:99999}}}
 function setActive(nav){navLinks.forEach(function(l){l.classList.remove("active")});var t=document.querySelector('.sidebar-nav a[data-nav="'+nav+'"]');if(t)t.classList.add("active")}
@@ -776,6 +777,13 @@ const scenes=[
 {file:"狐祖归来_白狐巡卫统领_动态站姿.png",name:"巡卫统领 · 动态站姿",script:"巡卫统领动态——拔剑或执锁的战斗姿态，冷硬金属光泽",section:"🦊 巡卫统领"},
 {file:"狐祖归来_白狐巡卫统领_特写细节.png",name:"巡卫统领 · 特写细节",script:"巡卫统领细节——镇狐锁环形结构、盔甲磨损纹理、银灰面料质感",section:"🦊 巡卫统领"},
 
+// ── 白狐巡卫 ──
+{file:"狐祖归来_白狐巡卫_正面全身.png",name:"巡卫 · 正面全身",script:"白狐巡卫正面——银黑轻甲，普通狐族士兵，王庭执法基层力量",section:"🦊 白狐巡卫"},
+{file:"狐祖归来_白狐巡卫_背面全身.png",name:"巡卫 · 背面全身",script:"白狐巡卫背面——长甲裙覆盖，实战型背影",section:"🦊 白狐巡卫"},
+{file:"狐祖归来_白狐巡卫_侧面全身.png",name:"巡卫 · 侧面全身",script:"白狐巡卫侧面——肩甲层叠，镇狐锁腰间可见",section:"🦊 白狐巡卫"},
+{file:"狐祖归来_白狐巡卫_动态站姿.png",name:"巡卫 · 动态站姿",script:"白狐巡卫动态——追捕或值守的姿态，冷硬金属与黑色内衬",section:"🦊 白狐巡卫"},
+{file:"狐祖归来_白狐巡卫_特写细节.png",name:"巡卫 · 特写细节",script:"白狐巡卫细节——轻甲磨损纹理、镇狐锁小型号、实战寒剑",section:"🦊 白狐巡卫"},
+
 // ── 白狐狐侍 ──
 {file:"狐祖归来_白狐狐侍_正面全身.png",name:"狐侍 · 正面全身",script:"狐侍正面——白狐王庭侍从，素净服饰，恭敬而从容",section:"🦊 白狐狐侍"},
 {file:"狐祖归来_白狐狐侍_背面全身.png",name:"狐侍 · 背面全身",script:"狐侍背面——简洁背影，日常廊庑间的身影",section:"🦊 白狐狐侍"},
@@ -786,7 +794,7 @@ const scenes=[
 
 const root=document.getElementById("content-root");
 const doneSections=new Set();
-const secIds={"📐 多角度视图":"sec-angles","👘 全身与姿态":"sec-fullbody","🙏 祭祀造型":"sec-ritual","⚡ 狐祖降临":"sec-awaken","👑 狐祖常态":"sec-normal","🌊 临渊面部":"sec-linyuan","🦊 王玄晏全身":"sec-xuanyan-body","🦊 王玄晏面部":"sec-xuanyan-face","😶 王玄晏表情":"sec-xuanyan-expr","⛩️ 飞升祭服":"sec-xuanyan-ritual","🦊 阿檀面部":"sec-atan-face","🦊 阿檀全身":"sec-atan-body","🦊 王嵩":"sec-wangsong","🦊 青禾面部":"sec-qinghe-face","🦊 青禾全身":"sec-qinghe-body","😶 青禾表情":"sec-qinghe-expr","🦊 巡卫统领":"sec-guard","🦊 白狐狐侍":"sec-hushi"};
+const secIds={"📐 多角度视图":"sec-angles","👘 全身与姿态":"sec-fullbody","🙏 祭祀造型":"sec-ritual","⚡ 狐祖降临":"sec-awaken","👑 狐祖常态":"sec-normal","🌊 临渊面部":"sec-linyuan","🦊 王玄晏全身":"sec-xuanyan-body","🦊 王玄晏面部":"sec-xuanyan-face","😶 王玄晏表情":"sec-xuanyan-expr","⛩️ 飞升祭服":"sec-xuanyan-ritual","🦊 阿檀面部":"sec-atan-face","🦊 阿檀全身":"sec-atan-body","🦊 王嵩":"sec-wangsong","🦊 青禾面部":"sec-qinghe-face","🦊 青禾全身":"sec-qinghe-body","😶 青禾表情":"sec-qinghe-expr","🦊 巡卫统领":"sec-guard","🦊 白狐巡卫":"sec-guard-regular","🦊 白狐狐侍":"sec-hushi"};
 scenes.forEach((sc,i)=>{
 const sec=sc.section;
 if(!doneSections.has(sec)){
