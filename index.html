@@ -141,7 +141,9 @@ body{background:#0a0a14;color:#ede4d4;font-family:"PingFang SC","Noto Serif SC",
 <a href="#bible-awaken" data-nav="awaken-bible" class="nav-sub">狐祖降临圣经</a>
 <a href="#sec-awaken" data-nav="awaken" class="nav-sub">⚡ 狐祖降临</a>
 <a href="#bible-normal" data-nav="normal-bible" class="nav-sub">狐祖常态圣经</a>
-<a href="#sec-normal" data-nav="normal" class="nav-sub">👑 狐祖常态</a>
+<a href="#sec-normal-face" data-nav="normal-face" class="nav-sub">👑 狐祖面部</a>
+<a href="#sec-normal-body" data-nav="normal-body" class="nav-sub">👑 狐祖全身</a>
+<a href="#sec-normal-expr" data-nav="normal-expr" class="nav-sub">😶 狐祖表情</a>
 <div class="nav-major">临渊·泽狐</div>
 <a href="#sec-linyuan" data-nav="linyuan">🌊 临渊面部</a>
 <div class="nav-major">王玄晏</div>
@@ -180,7 +182,7 @@ body{background:#0a0a14;color:#ede4d4;font-family:"PingFang SC","Noto Serif SC",
 <header class="hero">
 <p class="ep-title">狐祖归来 · EP01</p>
 <h1>狐 祖 归 来</h1>
-<p class="subtitle">雪娘 · 临渊 · 玄晏 · 阿檀 造型图集 · 一百一十九图</p>
+<p class="subtitle">雪娘 · 临渊 · 玄晏 · 阿檀 造型图集 · 一百四十三图</p>
 </header>
 
 <!-- ═══════ 狐族常态圣经 ═══════ -->
@@ -598,7 +600,7 @@ body{background:#0a0a14;color:#ede4d4;font-family:"PingFang SC","Noto Serif SC",
 </div>
 <span class="lb-nav lb-next" id="lbNext">&#8250;</span>
 </div>
-<div class="footer">狐祖归来 · 雪娘 · 临渊 · 玄晏 · 阿檀 · 王嵩 · 青禾 · 巡卫 · 统领 · 狐侍 · 一百一十九造型图</div>
+<div class="footer">狐祖归来 · 雪娘 · 临渊 · 玄晏 · 阿檀 · 王嵩 · 青禾 · 巡卫 · 统领 · 狐侍 · 一百四十三造型图</div>
 
 </div><!-- /.main-wrapper -->
 
@@ -632,7 +634,7 @@ document.querySelectorAll(".sidebar-nav a").forEach(function(a){a.addEventListen
 
 // ── Scroll spy ──
 var navLinks=document.querySelectorAll(".sidebar-nav a[data-nav]");
-var sectionMap={"top":0,"bible-common":"#bible-common","bible-lamp":"#bible-lamp","angles":"#sec-angles","fullbody":"#sec-fullbody","ritual-bible":"#bible-ritual","ritual":"#sec-ritual","awaken-bible":"#bible-awaken","awaken":"#sec-awaken","normal-bible":"#bible-normal","normal":"#sec-normal","linyuan":"#sec-linyuan","xuanyan-bible":"#bible-xuanyan","xuanyan-body":"#sec-xuanyan-body","xuanyan-face":"#sec-xuanyan-face","xuanyan-expr":"#sec-xuanyan-expr","xuanyan-ritual":"#sec-xuanyan-ritual","atan-face":"#sec-atan-face","atan-body":"#sec-atan-body","wangsong":"#sec-wangsong","wangsong-bible":"#bible-wangsong","qinghe-face":"#sec-qinghe-face","qinghe-body":"#sec-qinghe-body","qinghe-expr":"#sec-qinghe-expr","guard-bible":"#bible-guard","guard":"#sec-guard","guard-regular":"#sec-guard-regular","hushi-bible":"#bible-hushi","hushi":"#sec-hushi"};
+var sectionMap={"top":0,"bible-common":"#bible-common","bible-lamp":"#bible-lamp","angles":"#sec-angles","fullbody":"#sec-fullbody","ritual-bible":"#bible-ritual","ritual":"#sec-ritual","awaken-bible":"#bible-awaken","awaken":"#sec-awaken","normal-bible":"#bible-normal","normal-face":"#sec-normal-face","normal-body":"#sec-normal-body","normal-expr":"#sec-normal-expr","linyuan":"#sec-linyuan","xuanyan-bible":"#bible-xuanyan","xuanyan-body":"#sec-xuanyan-body","xuanyan-face":"#sec-xuanyan-face","xuanyan-expr":"#sec-xuanyan-expr","xuanyan-ritual":"#sec-xuanyan-ritual","atan-face":"#sec-atan-face","atan-body":"#sec-atan-body","wangsong":"#sec-wangsong","wangsong-bible":"#bible-wangsong","qinghe-face":"#sec-qinghe-face","qinghe-body":"#sec-qinghe-body","qinghe-expr":"#sec-qinghe-expr","guard-bible":"#bible-guard","guard":"#sec-guard","guard-regular":"#sec-guard-regular","hushi-bible":"#bible-hushi","hushi":"#sec-hushi"};
 var offsets={};
 function updateOffsets(){for(var k in sectionMap){if(sectionMap[k]===0){offsets[k]=0}else{var el=document.querySelector(sectionMap[k]);offsets[k]=el?el.offsetTop-120:99999}}}
 function setActive(nav){navLinks.forEach(function(l){l.classList.remove("active")});var t=document.querySelector('.sidebar-nav a[data-nav="'+nav+'"]');if(t)t.classList.add("active")}
@@ -673,11 +675,30 @@ const scenes=[
 {file:"觉醒_狐祖归来_雪娘_特写细节.png",name:"降临 · 特写细节",script:"降临细节特写——蛛网晶石节点、暗红血脉纹路、金色利爪、荧光紫瞳，捕捉觉醒每一处精微",section:"⚡ 狐祖降临"},
 
 // ── 狐祖常态 ──
-{file:"常态_狐祖归来_雪娘_正面全身.png",name:"常态 · 正面全身",script:"狐祖常态正面——紫红狐皮披肩从肩部垂落，金色绑腿高跟，暗金蛛网礼服，女王俯瞰",section:"👑 狐祖常态"},
-{file:"常态_狐祖归来_雪娘_背面全身.png",name:"常态 · 背面全身",script:"常态背面——狐皮披肩拖垂至地，金丝蛛网斗篷展露暗红内里，九尾隐于衣摆流线",section:"👑 狐祖常态"},
-{file:"常态_狐祖归来_雪娘_侧面全身.png",name:"常态 · 侧面全身",script:"常态侧面——高衩礼服露出金色绑腿高跟，紫红狐尾盘旋于足畔，清冷威严",section:"👑 狐祖常态"},
-{file:"常态_狐祖归来_雪娘_动态站姿.png",name:"常态 · 动态站姿",script:"常态动态——披肩微扬、金丝飘动，狐尾随步伐轻摆，女王出巡的凌厉瞬间",section:"👑 狐祖常态"},
-{file:"常态_狐祖归来_雪娘_特写细节.png",name:"常态 · 特写细节",script:"常态细节——紫红狐皮毛发质感、金色蛛网胸饰与红宝石、绑腿金丝与趾甲、暗金拉链饰",section:"👑 狐祖常态"},
+{file:"常态_狐祖归来_雪娘_正面正视.png",name:"常态 · 正面正视",script:"狐祖常态正面——紫红狐皮披肩，金丝额饰，女王俯瞰众生的目光",section:"👑 狐祖面部"},
+{file:"常态_狐祖归来_雪娘_左侧正侧.png",name:"常态 · 左侧正侧",script:"狐祖左正侧——高束发髻，侧颜如白玉浮雕",section:"👑 狐祖面部"},
+{file:"常态_狐祖归来_雪娘_右侧正侧.png",name:"常态 · 右侧正侧",script:"狐祖右正侧——耳饰与颌线的威严轮廓",section:"👑 狐祖面部"},
+{file:"常态_狐祖归来_雪娘_左侧45度.png",name:"常态 · 左侧45度",script:"狐祖左45°——微侧间流露千年祖威",section:"👑 狐祖面部"},
+{file:"常态_狐祖归来_雪娘_右侧45度.png",name:"常态 · 右侧45度",script:"狐祖右45°——眼神微睨，不可冒犯",section:"👑 狐祖面部"},
+{file:"常态_狐祖归来_雪娘_俯视角度.png",name:"常态 · 俯视角度",script:"狐祖俯视——冠顶与发髻的仪式结构",section:"👑 狐祖面部"},
+{file:"常态_狐祖归来_雪娘_仰视角度.png",name:"常态 · 仰视角度",script:"狐祖仰视——下颌与脖颈线条的女王气场",section:"👑 狐祖面部"},
+{file:"常态_狐祖归来_雪娘_正面全身.png",name:"常态 · 正面全身",script:"狐祖常态正面——紫红狐皮披肩，金色绑腿高跟，王庭统治者",section:"👑 狐祖全身"},
+{file:"常态_狐祖归来_雪娘_背面全身.png",name:"常态 · 背面全身",script:"狐祖背面——狐皮披肩拖地，暗金斗篷内红隐现",section:"👑 狐祖全身"},
+{file:"常态_狐祖归来_雪娘_侧面全身.png",name:"常态 · 侧面全身",script:"狐祖侧面——高衩礼服，绑腿金丝缠绕，狐尾盘旋",section:"👑 狐祖全身"},
+{file:"常态_狐祖归来_雪娘_动态站姿.png",name:"常态 · 动态站姿",script:"狐祖动态——披肩微扬步伐凌厉，女王出巡",section:"👑 狐祖全身"},
+{file:"常态_狐祖归来_雪娘_特写细节.png",name:"常态 · 特写细节",script:"狐祖细节——狐皮毛发、金丝胸饰、绑腿与趾甲",section:"👑 狐祖全身"},
+{file:"常态_狐祖归来_雪娘_默认状态.png",name:"常态 · 默认状态",script:"狐祖默认——平静眼神中藏千年祖威",section:"😶 狐祖表情"},
+{file:"常态_狐祖归来_雪娘_轻微微笑.png",name:"常态 · 轻微微笑",script:"狐祖轻微微笑——嘴角微扬的威仪",section:"😶 狐祖表情"},
+{file:"常态_狐祖归来_雪娘_愤怒.png",name:"常态 · 愤怒",script:"狐祖愤怒——千年狐祖的雷霆之怒",section:"😶 狐祖表情"},
+{file:"常态_狐祖归来_雪娘_悲伤.png",name:"常态 · 悲伤",script:"狐祖悲伤——王座上的孤独",section:"😶 狐祖表情"},
+{file:"常态_狐祖归来_雪娘_恐惧.png",name:"常态 · 恐惧",script:"狐祖恐惧——罕见动摇的瞬间",section:"😶 狐祖表情"},
+{file:"常态_狐祖归来_雪娘_惊讶.png",name:"常态 · 惊讶",script:"狐祖惊讶——意想不到的冲击",section:"😶 狐祖表情"},
+{file:"常态_狐祖归来_雪娘_疑惑.png",name:"常态 · 疑惑",script:"狐祖疑惑——审视中的狐疑",section:"😶 狐祖表情"},
+{file:"常态_狐祖归来_雪娘_思考.png",name:"常态 · 思考",script:"狐祖思考——千年智慧的沉静",section:"😶 狐祖表情"},
+{file:"常态_狐祖归来_雪娘_犹豫.png",name:"常态 · 犹豫",script:"狐祖犹豫——决策边缘的徘徊",section:"😶 狐祖表情"},
+{file:"常态_狐祖归来_雪娘_压力状态.png",name:"常态 · 压力状态",script:"狐祖压力——重担之下的隐忍",section:"😶 狐祖表情"},
+{file:"常态_狐祖归来_雪娘_释然.png",name:"常态 · 释然",script:"狐祖释然——放下重担的松弛",section:"😶 狐祖表情"},
+{file:"常态_狐祖归来_雪娘_角色招牌.png",name:"常态 · 角色招牌",script:"狐祖招牌——千年女王，不可撼动的祖威气场",section:"😶 狐祖表情"},
 
 // ── 临渊·泽狐 ──
 {file:"狐祖归来_临渊_正面正视.png",name:"临渊 · 正面正视",script:"临渊正面——泽狐一脉，面容清冷如深潭，眼眸深邃藏水泽之灵",section:"🌊 临渊面部"},
@@ -796,7 +817,7 @@ const scenes=[
 
 const root=document.getElementById("content-root");
 const doneSections=new Set();
-const secIds={"📐 多角度视图":"sec-angles","👘 全身与姿态":"sec-fullbody","🙏 祭祀造型":"sec-ritual","⚡ 狐祖降临":"sec-awaken","👑 狐祖常态":"sec-normal","🌊 临渊面部":"sec-linyuan","🦊 王玄晏全身":"sec-xuanyan-body","🦊 王玄晏面部":"sec-xuanyan-face","😶 王玄晏表情":"sec-xuanyan-expr","⛩️ 飞升祭服":"sec-xuanyan-ritual","🦊 阿檀面部":"sec-atan-face","🦊 阿檀全身":"sec-atan-body","🦊 王嵩":"sec-wangsong","🦊 青禾面部":"sec-qinghe-face","🦊 青禾全身":"sec-qinghe-body","😶 青禾表情":"sec-qinghe-expr","🦊 巡卫统领":"sec-guard","🦊 白狐巡卫":"sec-guard-regular","🦊 白狐狐侍":"sec-hushi"};
+const secIds={"📐 多角度视图":"sec-angles","👘 全身与姿态":"sec-fullbody","🙏 祭祀造型":"sec-ritual","⚡ 狐祖降临":"sec-awaken","👑 狐祖面部":"sec-normal-face","👑 狐祖全身":"sec-normal-body","😶 狐祖表情":"sec-normal-expr","🌊 临渊面部":"sec-linyuan","🦊 王玄晏全身":"sec-xuanyan-body","🦊 王玄晏面部":"sec-xuanyan-face","😶 王玄晏表情":"sec-xuanyan-expr","⛩️ 飞升祭服":"sec-xuanyan-ritual","🦊 阿檀面部":"sec-atan-face","🦊 阿檀全身":"sec-atan-body","🦊 王嵩":"sec-wangsong","🦊 青禾面部":"sec-qinghe-face","🦊 青禾全身":"sec-qinghe-body","😶 青禾表情":"sec-qinghe-expr","🦊 巡卫统领":"sec-guard","🦊 白狐巡卫":"sec-guard-regular","🦊 白狐狐侍":"sec-hushi"};
 scenes.forEach((sc,i)=>{
 const sec=sc.section;
 if(!doneSections.has(sec)){
