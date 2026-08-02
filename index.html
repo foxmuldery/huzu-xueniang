@@ -148,6 +148,9 @@ body{background:#0a0a14;color:#ede4d4;font-family:"PingFang SC","Noto Serif SC",
 <a href="#sec-normal-face" data-nav="normal-face" class="nav-sub">👑 狐祖面部</a>
 <a href="#sec-normal-body" data-nav="normal-body" class="nav-sub">👑 狐祖全身</a>
 <a href="#sec-normal-expr" data-nav="normal-expr" class="nav-sub">😶 狐祖表情</a>
+<a href="#sec-thunder-face" data-nav="thunder-face" class="nav-sub">⚡ 引雷面部</a>
+<a href="#sec-thunder-body" data-nav="thunder-body" class="nav-sub">⚡ 引雷全身</a>
+<a href="#sec-thunder-expr" data-nav="thunder-expr" class="nav-sub">😶 引雷表情</a>
 <div class="nav-major">临渊·泽狐</div>
 <a href="#sec-linyuan" data-nav="linyuan">🌊 临渊面部</a>
 <div class="nav-major">王玄晏</div>
@@ -187,7 +190,7 @@ body{background:#0a0a14;color:#ede4d4;font-family:"PingFang SC","Noto Serif SC",
 <header class="hero">
 <p class="ep-title">狐祖归来 · EP01</p>
 <h1>狐 祖 归 来</h1>
-<p class="subtitle">雪娘 · 临渊 · 玄晏 · 阿檀 造型图集 · 一百九十二图</p>
+<p class="subtitle">雪娘 · 临渊 · 玄晏 · 阿檀 造型图集 · 二百一十六图</p>
 </header>
 
 <!-- ═══════ 狐族常态圣经 ═══════ -->
@@ -605,7 +608,7 @@ body{background:#0a0a14;color:#ede4d4;font-family:"PingFang SC","Noto Serif SC",
 </div>
 <span class="lb-nav lb-next" id="lbNext">&#8250;</span>
 </div>
-<div class="footer">狐祖归来 · 雪娘 · 临渊 · 玄晏 · 阿檀 · 王嵩 · 青禾 · 巡卫 · 统领 · 狐侍 · 一百九十二造型图</div>
+<div class="footer">狐祖归来 · 雪娘 · 临渊 · 玄晏 · 阿檀 · 王嵩 · 青禾 · 巡卫 · 统领 · 狐侍 · 二百一十六造型图</div>
 
 </div><!-- /.main-wrapper -->
 
@@ -639,7 +642,7 @@ document.querySelectorAll(".sidebar-nav a").forEach(function(a){a.addEventListen
 
 // ── Scroll spy ──
 var navLinks=document.querySelectorAll(".sidebar-nav a[data-nav]");
-var sectionMap={"top":0,"bible-common":"#bible-common","bible-lamp":"#bible-lamp","angles":"#sec-angles","fullbody":"#sec-fullbody","lamp-expr":"#sec-lamp-expr","ritual-bible":"#bible-ritual","ritual-face":"#sec-ritual-face","ritual-body":"#sec-ritual-body","ritual-expr":"#sec-ritual-expr","ritual-all":"#sec-ritual-all","awaken-bible":"#bible-awaken","awaken":"#sec-awaken","normal-bible":"#bible-normal","normal-face":"#sec-normal-face","normal-body":"#sec-normal-body","normal-expr":"#sec-normal-expr","linyuan":"#sec-linyuan","xuanyan-bible":"#bible-xuanyan","xuanyan-body":"#sec-xuanyan-body","xuanyan-face":"#sec-xuanyan-face","xuanyan-expr":"#sec-xuanyan-expr","xuanyan-ritual":"#sec-xuanyan-ritual","xuanyan-thunder":"#sec-xuanyan-thunder","atan-face":"#sec-atan-face","atan-body":"#sec-atan-body","wangsong":"#sec-wangsong","wangsong-bible":"#bible-wangsong","qinghe-face":"#sec-qinghe-face","qinghe-body":"#sec-qinghe-body","qinghe-expr":"#sec-qinghe-expr","guard-bible":"#bible-guard","guard":"#sec-guard","guard-regular":"#sec-guard-regular","ritual-group":"#sec-ritual-group","hushi-bible":"#bible-hushi","hushi":"#sec-hushi"};
+var sectionMap={"top":0,"bible-common":"#bible-common","bible-lamp":"#bible-lamp","angles":"#sec-angles","fullbody":"#sec-fullbody","lamp-expr":"#sec-lamp-expr","ritual-bible":"#bible-ritual","ritual-face":"#sec-ritual-face","ritual-body":"#sec-ritual-body","ritual-expr":"#sec-ritual-expr","ritual-all":"#sec-ritual-all","awaken-bible":"#bible-awaken","awaken":"#sec-awaken","normal-bible":"#bible-normal","normal-face":"#sec-normal-face","normal-body":"#sec-normal-body","normal-expr":"#sec-normal-expr","thunder-face":"#sec-thunder-face","thunder-body":"#sec-thunder-body","thunder-expr":"#sec-thunder-expr","linyuan":"#sec-linyuan","xuanyan-bible":"#bible-xuanyan","xuanyan-body":"#sec-xuanyan-body","xuanyan-face":"#sec-xuanyan-face","xuanyan-expr":"#sec-xuanyan-expr","xuanyan-ritual":"#sec-xuanyan-ritual","xuanyan-thunder":"#sec-xuanyan-thunder","atan-face":"#sec-atan-face","atan-body":"#sec-atan-body","wangsong":"#sec-wangsong","wangsong-bible":"#bible-wangsong","qinghe-face":"#sec-qinghe-face","qinghe-body":"#sec-qinghe-body","qinghe-expr":"#sec-qinghe-expr","guard-bible":"#bible-guard","guard":"#sec-guard","guard-regular":"#sec-guard-regular","ritual-group":"#sec-ritual-group","hushi-bible":"#bible-hushi","hushi":"#sec-hushi"};
 var offsets={};
 function updateOffsets(){for(var k in sectionMap){if(sectionMap[k]===0){offsets[k]=0}else{var el=document.querySelector(sectionMap[k]);offsets[k]=el?el.offsetTop-120:99999}}}
 function setActive(nav){navLinks.forEach(function(l){l.classList.remove("active")});var t=document.querySelector('.sidebar-nav a[data-nav="'+nav+'"]');if(t)t.classList.add("active")}
@@ -748,6 +751,32 @@ const scenes=[
 {file:"常态_狐祖归来_雪娘_压力状态.png",name:"常态 · 压力状态",script:"狐祖压力——重担之下的隐忍",section:"😶 狐祖表情"},
 {file:"常态_狐祖归来_雪娘_释然.png",name:"常态 · 释然",script:"狐祖释然——放下重担的松弛",section:"😶 狐祖表情"},
 {file:"常态_狐祖归来_雪娘_角色招牌.png",name:"常态 · 角色招牌",script:"狐祖招牌——千年女王，不可撼动的祖威气场",section:"😶 狐祖表情"},
+
+// ── 引雷造型 ──
+{file:"引雷_狐祖归来_雪娘_正面正视.png",name:"引雷 · 正面正视",script:"引雷正面——狐祖降雷，紫电从眉心贯入九尾，眸光灼烧",section:"⚡ 引雷面部"},
+{file:"引雷_狐祖归来_雪娘_左侧正侧.png",name:"引雷 · 左侧正侧",script:"引雷左正侧——雷电沿侧颜游走，发丝在电光中飘起",section:"⚡ 引雷面部"},
+{file:"引雷_狐祖归来_雪娘_右侧正侧.png",name:"引雷 · 右侧正侧",script:"引雷右正侧——电光映照耳饰与颌线，雷威轮廓",section:"⚡ 引雷面部"},
+{file:"引雷_狐祖归来_雪娘_左侧45度.png",name:"引雷 · 左侧45度",script:"引雷左45°——微侧间紫电交织，千年祖威的释放",section:"⚡ 引雷面部"},
+{file:"引雷_狐祖归来_雪娘_右侧45度.png",name:"引雷 · 右侧45度",script:"引雷右45°——电光瞳中倒映，雷弧环绕",section:"⚡ 引雷面部"},
+{file:"引雷_狐祖归来_雪娘_俯视角度.png",name:"引雷 · 俯视角度",script:"引雷俯视——雷云从头顶压下的天威视角",section:"⚡ 引雷面部"},
+{file:"引雷_狐祖归来_雪娘_仰视角度.png",name:"引雷 · 仰视角度",script:"引雷仰视——雷光从下方照亮下颌，天雷灌顶的瞬间",section:"⚡ 引雷面部"},
+{file:"引雷_狐祖归来_雪娘_正面全身.png",name:"引雷 · 正面全身",script:"引雷全身正面——天雷自云中劈下，狐祖张臂承接，九尾在电光中全部展开",section:"⚡ 引雷全身"},
+{file:"引雷_狐祖归来_雪娘_背面全身.png",name:"引雷 · 背面全身",script:"引雷全身背面——雷霆从背脊灌注，九尾轮廓在闪电中显露真形",section:"⚡ 引雷全身"},
+{file:"引雷_狐祖归来_雪娘_侧面全身.png",name:"引雷 · 侧面全身",script:"引雷全身侧面——侧身承受雷击，电光沿手臂至指尖迸发",section:"⚡ 引雷全身"},
+{file:"引雷_狐祖归来_雪娘_动态站姿.png",name:"引雷 · 动态站姿",script:"引雷动态——雷霆降临的冲击姿态，裙摆与狐尾在电爆中飞扬",section:"⚡ 引雷全身"},
+{file:"引雷_狐祖归来_雪娘_特写细节.png",name:"引雷 · 特写细节",script:"引雷细节——紫电纹路、雷击焦痕、九尾在电光中的晶丝结构",section:"⚡ 引雷全身"},
+{file:"引雷_狐祖归来_雪娘_默认状态.png",name:"引雷 · 默认状态",script:"引雷默认——雷云初聚，瞳中紫光微闪的蓄势凝视",section:"😶 引雷表情"},
+{file:"引雷_狐祖归来_雪娘_轻微微笑.png",name:"引雷 · 轻微微笑",script:"引雷轻微微笑——掌控万雷的从容",section:"😶 引雷表情"},
+{file:"引雷_狐祖归来_雪娘_愤怒.png",name:"引雷 · 愤怒",script:"引雷愤怒——九天怒雷随情绪轰落",section:"😶 引雷表情"},
+{file:"引雷_狐祖归来_雪娘_悲伤.png",name:"引雷 · 悲伤",script:"引雷悲伤——雷雨中祖威孤独",section:"😶 引雷表情"},
+{file:"引雷_狐祖归来_雪娘_恐惧.png",name:"引雷 · 恐惧",script:"引雷恐惧——天雷失控反噬的惊惧",section:"😶 引雷表情"},
+{file:"引雷_狐祖归来_雪娘_惊讶.png",name:"引雷 · 惊讶",script:"引雷惊讶——雷劫降临的超乎预料",section:"😶 引雷表情"},
+{file:"引雷_狐祖归来_雪娘_疑惑.png",name:"引雷 · 疑惑",script:"引雷疑惑——雷中有异象的警觉",section:"😶 引雷表情"},
+{file:"引雷_狐祖归来_雪娘_思考.png",name:"引雷 · 思考",script:"引雷思考——驾驭千雷的千年智慧",section:"😶 引雷表情"},
+{file:"引雷_狐祖归来_雪娘_犹豫.png",name:"引雷 · 犹豫",script:"引雷犹豫——渡劫前的瞬间踌躇",section:"😶 引雷表情"},
+{file:"引雷_狐祖归来_雪娘_压力状态.png",name:"引雷 · 压力状态",script:"引雷压力——雷电极限负荷下的挣扎",section:"😶 引雷表情"},
+{file:"引雷_狐祖归来_雪娘_释然.png",name:"引雷 · 释然",script:"引雷释然——雷过天晴，雷霆终归于心的从容",section:"😶 引雷表情"},
+{file:"引雷_狐祖归来_雪娘_角色招牌.png",name:"引雷 · 角色招牌",script:"引雷招牌——狐祖引雷的标志性姿态，九尾全开、紫电环绕的女神降临",section:"😶 引雷表情"},
 
 // ── 临渊·泽狐 ──
 {file:"狐祖归来_临渊_正面正视.png",name:"临渊 · 正面正视",script:"临渊正面——泽狐一脉，面容清冷如深潭，眼眸深邃藏水泽之灵",section:"🌊 临渊面部"},
@@ -877,7 +906,7 @@ const scenes=[
 
 const root=document.getElementById("content-root");
 const doneSections=new Set();
-const secIds={"📐 多角度视图":"sec-angles","👘 全身与姿态":"sec-fullbody","😶 守灯表情":"sec-lamp-expr","🙏 祭祀造型":"sec-ritual","🙏 祭祀面部":"sec-ritual-face","🙏 祭祀全身":"sec-ritual-body","😶 祭祀表情":"sec-ritual-expr","⛩️ 祭祀整体":"sec-ritual-all","⛩️ 祭祀礼服":"sec-ritual-group","⚡ 狐祖降临":"sec-awaken","👑 狐祖面部":"sec-normal-face","👑 狐祖全身":"sec-normal-body","😶 狐祖表情":"sec-normal-expr","🌊 临渊面部":"sec-linyuan","🦊 王玄晏全身":"sec-xuanyan-body","🦊 王玄晏面部":"sec-xuanyan-face","😶 王玄晏表情":"sec-xuanyan-expr","⛩️ 飞升祭服":"sec-xuanyan-ritual","⚡ 净雷室造型":"sec-xuanyan-thunder","🦊 阿檀面部":"sec-atan-face","🦊 阿檀全身":"sec-atan-body","🦊 王嵩":"sec-wangsong","🦊 青禾面部":"sec-qinghe-face","🦊 青禾全身":"sec-qinghe-body","😶 青禾表情":"sec-qinghe-expr","🦊 巡卫统领":"sec-guard","🦊 白狐巡卫":"sec-guard-regular","🦊 白狐狐侍":"sec-hushi"};
+const secIds={"📐 多角度视图":"sec-angles","👘 全身与姿态":"sec-fullbody","😶 守灯表情":"sec-lamp-expr","🙏 祭祀造型":"sec-ritual","🙏 祭祀面部":"sec-ritual-face","🙏 祭祀全身":"sec-ritual-body","😶 祭祀表情":"sec-ritual-expr","⛩️ 祭祀整体":"sec-ritual-all","⛩️ 祭祀礼服":"sec-ritual-group","⚡ 狐祖降临":"sec-awaken","👑 狐祖面部":"sec-normal-face","👑 狐祖全身":"sec-normal-body","😶 狐祖表情":"sec-normal-expr","⚡ 引雷面部":"sec-thunder-face","⚡ 引雷全身":"sec-thunder-body","😶 引雷表情":"sec-thunder-expr","🌊 临渊面部":"sec-linyuan","🦊 王玄晏全身":"sec-xuanyan-body","🦊 王玄晏面部":"sec-xuanyan-face","😶 王玄晏表情":"sec-xuanyan-expr","⛩️ 飞升祭服":"sec-xuanyan-ritual","⚡ 净雷室造型":"sec-xuanyan-thunder","🦊 阿檀面部":"sec-atan-face","🦊 阿檀全身":"sec-atan-body","🦊 王嵩":"sec-wangsong","🦊 青禾面部":"sec-qinghe-face","🦊 青禾全身":"sec-qinghe-body","😶 青禾表情":"sec-qinghe-expr","🦊 巡卫统领":"sec-guard","🦊 白狐巡卫":"sec-guard-regular","🦊 白狐狐侍":"sec-hushi"};
 scenes.forEach((sc,i)=>{
 const sec=sc.section;
 if(!doneSections.has(sec)){
