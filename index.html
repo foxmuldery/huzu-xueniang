@@ -156,6 +156,7 @@ body{background:#0a0a14;color:#ede4d4;font-family:"PingFang SC","Noto Serif SC",
 <a href="#sec-xuanyan-face" data-nav="xuanyan-face">🦊 王玄晏面部</a>
 <a href="#sec-xuanyan-expr" data-nav="xuanyan-expr">😶 王玄晏表情</a>
 <a href="#sec-xuanyan-ritual" data-nav="xuanyan-ritual">⛩️ 飞升祭服</a>
+<a href="#sec-xuanyan-thunder" data-nav="xuanyan-thunder">⚡ 净雷室造型</a>
 <div class="nav-major">阿檀·藏狐</div>
 <a href="#sec-atan-face" data-nav="atan-face">🦊 阿檀面部</a>
 <a href="#sec-atan-body" data-nav="atan-body">🦊 阿檀全身</a>
@@ -186,7 +187,7 @@ body{background:#0a0a14;color:#ede4d4;font-family:"PingFang SC","Noto Serif SC",
 <header class="hero">
 <p class="ep-title">狐祖归来 · EP01</p>
 <h1>狐 祖 归 来</h1>
-<p class="subtitle">雪娘 · 临渊 · 玄晏 · 阿檀 造型图集 · 一百八十三图</p>
+<p class="subtitle">雪娘 · 临渊 · 玄晏 · 阿檀 造型图集 · 一百九十二图</p>
 </header>
 
 <!-- ═══════ 狐族常态圣经 ═══════ -->
@@ -604,7 +605,7 @@ body{background:#0a0a14;color:#ede4d4;font-family:"PingFang SC","Noto Serif SC",
 </div>
 <span class="lb-nav lb-next" id="lbNext">&#8250;</span>
 </div>
-<div class="footer">狐祖归来 · 雪娘 · 临渊 · 玄晏 · 阿檀 · 王嵩 · 青禾 · 巡卫 · 统领 · 狐侍 · 一百八十三造型图</div>
+<div class="footer">狐祖归来 · 雪娘 · 临渊 · 玄晏 · 阿檀 · 王嵩 · 青禾 · 巡卫 · 统领 · 狐侍 · 一百九十二造型图</div>
 
 </div><!-- /.main-wrapper -->
 
@@ -638,7 +639,7 @@ document.querySelectorAll(".sidebar-nav a").forEach(function(a){a.addEventListen
 
 // ── Scroll spy ──
 var navLinks=document.querySelectorAll(".sidebar-nav a[data-nav]");
-var sectionMap={"top":0,"bible-common":"#bible-common","bible-lamp":"#bible-lamp","angles":"#sec-angles","fullbody":"#sec-fullbody","lamp-expr":"#sec-lamp-expr","ritual-bible":"#bible-ritual","ritual-face":"#sec-ritual-face","ritual-body":"#sec-ritual-body","ritual-expr":"#sec-ritual-expr","ritual-all":"#sec-ritual-all","awaken-bible":"#bible-awaken","awaken":"#sec-awaken","normal-bible":"#bible-normal","normal-face":"#sec-normal-face","normal-body":"#sec-normal-body","normal-expr":"#sec-normal-expr","linyuan":"#sec-linyuan","xuanyan-bible":"#bible-xuanyan","xuanyan-body":"#sec-xuanyan-body","xuanyan-face":"#sec-xuanyan-face","xuanyan-expr":"#sec-xuanyan-expr","xuanyan-ritual":"#sec-xuanyan-ritual","atan-face":"#sec-atan-face","atan-body":"#sec-atan-body","wangsong":"#sec-wangsong","wangsong-bible":"#bible-wangsong","qinghe-face":"#sec-qinghe-face","qinghe-body":"#sec-qinghe-body","qinghe-expr":"#sec-qinghe-expr","guard-bible":"#bible-guard","guard":"#sec-guard","guard-regular":"#sec-guard-regular","ritual-group":"#sec-ritual-group","hushi-bible":"#bible-hushi","hushi":"#sec-hushi"};
+var sectionMap={"top":0,"bible-common":"#bible-common","bible-lamp":"#bible-lamp","angles":"#sec-angles","fullbody":"#sec-fullbody","lamp-expr":"#sec-lamp-expr","ritual-bible":"#bible-ritual","ritual-face":"#sec-ritual-face","ritual-body":"#sec-ritual-body","ritual-expr":"#sec-ritual-expr","ritual-all":"#sec-ritual-all","awaken-bible":"#bible-awaken","awaken":"#sec-awaken","normal-bible":"#bible-normal","normal-face":"#sec-normal-face","normal-body":"#sec-normal-body","normal-expr":"#sec-normal-expr","linyuan":"#sec-linyuan","xuanyan-bible":"#bible-xuanyan","xuanyan-body":"#sec-xuanyan-body","xuanyan-face":"#sec-xuanyan-face","xuanyan-expr":"#sec-xuanyan-expr","xuanyan-ritual":"#sec-xuanyan-ritual","xuanyan-thunder":"#sec-xuanyan-thunder","atan-face":"#sec-atan-face","atan-body":"#sec-atan-body","wangsong":"#sec-wangsong","wangsong-bible":"#bible-wangsong","qinghe-face":"#sec-qinghe-face","qinghe-body":"#sec-qinghe-body","qinghe-expr":"#sec-qinghe-expr","guard-bible":"#bible-guard","guard":"#sec-guard","guard-regular":"#sec-guard-regular","ritual-group":"#sec-ritual-group","hushi-bible":"#bible-hushi","hushi":"#sec-hushi"};
 var offsets={};
 function updateOffsets(){for(var k in sectionMap){if(sectionMap[k]===0){offsets[k]=0}else{var el=document.querySelector(sectionMap[k]);offsets[k]=el?el.offsetTop-120:99999}}}
 function setActive(nav){navLinks.forEach(function(l){l.classList.remove("active")});var t=document.querySelector('.sidebar-nav a[data-nav="'+nav+'"]');if(t)t.classList.add("active")}
@@ -794,6 +795,17 @@ const scenes=[
 {file:"玄晏祭服_狐祖归来_王玄晏_动态站姿.png",name:"祭服 · 动态站姿",script:"祭服动态——披风微扬，礼剑在手，迎接天命的仪式姿态",section:"⛩️ 飞升祭服"},
 {file:"玄晏祭服_狐祖归来_王玄晏_特写细节.png",name:"祭服 · 特写细节",script:"祭服细节——金色额饰红宝石、血脉纹章、白玉腰封、礼剑金柄与长穗",section:"⛩️ 飞升祭服"},
 
+// ── 王玄晏 · 净雷室造型 ──
+{file:"净雷_狐祖归来_王玄晏_正面全身.png",name:"净雷 · 正面全身",script:"净雷室正面——引雷姿态，白狐少主以身为引召唤雷霆",section:"⚡ 净雷室造型"},
+{file:"净雷_狐祖归来_王玄晏_背面全身.png",name:"净雷 · 背面全身",script:"净雷室背面——雷光映射下的背影，披风翻涌",section:"⚡ 净雷室造型"},
+{file:"净雷_狐祖归来_王玄晏_侧面全身.png",name:"净雷 · 侧面全身",script:"净雷室侧面——侧身承受雷击，冷峻中蕴含毁灭之力",section:"⚡ 净雷室造型"},
+{file:"净雷_狐祖归来_王玄晏_动态站姿.png",name:"净雷 · 动态站姿",script:"净雷室动态——雷霆降临瞬间，衣袍与发丝被气浪掀起",section:"⚡ 净雷室造型"},
+{file:"净雷_狐祖归来_王玄晏_特写细节.png",name:"净雷 · 特写细节",script:"净雷室细节——雷击后的焦痕纹理、金属辉光、能量脉络",section:"⚡ 净雷室造型"},
+{file:"净雷_狐祖归来_王玄晏_脸部_眼镜_发型细节.png",name:"净雷 · 面部细节",script:"净雷室面部——雷光映射下的眼眸与面部能量纹路",section:"⚡ 净雷室造型"},
+{file:"净雷_狐祖归来_王玄晏_服装结构与材质板.png",name:"净雷 · 服装材质",script:"净雷室材质——耐雷织物、金属导电纹理与能量传导结构",section:"⚡ 净雷室造型"},
+{file:"净雷_狐祖归来_王玄晏_随身物资产.png",name:"净雷 · 随身物",script:"净雷室随身物——引雷法器、导电配饰与雷击防护装置",section:"⚡ 净雷室造型"},
+{file:"净雷_狐祖归来_王玄晏_剪影识别系统.png",name:"净雷 · 剪影识别",script:"净雷室剪影——雷光中的轮廓识别，白狐少主与雷霆的共生剪影",section:"⚡ 净雷室造型"},
+
 // ── 阿檀·藏狐 ──
 {file:"狐祖归来_阿檀_正面正视.png",name:"阿檀 · 正面正视",script:"阿檀正面——藏狐一脉，憨厚中带警觉，温暖可靠",section:"🦊 阿檀面部"},
 {file:"狐祖归来_阿檀_左侧正侧.png",name:"阿檀 · 左侧正侧",script:"阿檀左正侧——侧颜敦厚，藏狐特有的沉稳轮廓",section:"🦊 阿檀面部"},
@@ -865,7 +877,7 @@ const scenes=[
 
 const root=document.getElementById("content-root");
 const doneSections=new Set();
-const secIds={"📐 多角度视图":"sec-angles","👘 全身与姿态":"sec-fullbody","😶 守灯表情":"sec-lamp-expr","🙏 祭祀造型":"sec-ritual","🙏 祭祀面部":"sec-ritual-face","🙏 祭祀全身":"sec-ritual-body","😶 祭祀表情":"sec-ritual-expr","⛩️ 祭祀整体":"sec-ritual-all","⛩️ 祭祀礼服":"sec-ritual-group","⚡ 狐祖降临":"sec-awaken","👑 狐祖面部":"sec-normal-face","👑 狐祖全身":"sec-normal-body","😶 狐祖表情":"sec-normal-expr","🌊 临渊面部":"sec-linyuan","🦊 王玄晏全身":"sec-xuanyan-body","🦊 王玄晏面部":"sec-xuanyan-face","😶 王玄晏表情":"sec-xuanyan-expr","⛩️ 飞升祭服":"sec-xuanyan-ritual","🦊 阿檀面部":"sec-atan-face","🦊 阿檀全身":"sec-atan-body","🦊 王嵩":"sec-wangsong","🦊 青禾面部":"sec-qinghe-face","🦊 青禾全身":"sec-qinghe-body","😶 青禾表情":"sec-qinghe-expr","🦊 巡卫统领":"sec-guard","🦊 白狐巡卫":"sec-guard-regular","🦊 白狐狐侍":"sec-hushi"};
+const secIds={"📐 多角度视图":"sec-angles","👘 全身与姿态":"sec-fullbody","😶 守灯表情":"sec-lamp-expr","🙏 祭祀造型":"sec-ritual","🙏 祭祀面部":"sec-ritual-face","🙏 祭祀全身":"sec-ritual-body","😶 祭祀表情":"sec-ritual-expr","⛩️ 祭祀整体":"sec-ritual-all","⛩️ 祭祀礼服":"sec-ritual-group","⚡ 狐祖降临":"sec-awaken","👑 狐祖面部":"sec-normal-face","👑 狐祖全身":"sec-normal-body","😶 狐祖表情":"sec-normal-expr","🌊 临渊面部":"sec-linyuan","🦊 王玄晏全身":"sec-xuanyan-body","🦊 王玄晏面部":"sec-xuanyan-face","😶 王玄晏表情":"sec-xuanyan-expr","⛩️ 飞升祭服":"sec-xuanyan-ritual","⚡ 净雷室造型":"sec-xuanyan-thunder","🦊 阿檀面部":"sec-atan-face","🦊 阿檀全身":"sec-atan-body","🦊 王嵩":"sec-wangsong","🦊 青禾面部":"sec-qinghe-face","🦊 青禾全身":"sec-qinghe-body","😶 青禾表情":"sec-qinghe-expr","🦊 巡卫统领":"sec-guard","🦊 白狐巡卫":"sec-guard-regular","🦊 白狐狐侍":"sec-hushi"};
 scenes.forEach((sc,i)=>{
 const sec=sc.section;
 if(!doneSections.has(sec)){
