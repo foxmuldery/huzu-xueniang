@@ -137,7 +137,10 @@ body{background:#0a0a14;color:#ede4d4;font-family:"PingFang SC","Noto Serif SC",
 <a href="#sec-angles" data-nav="angles" class="nav-sub">📐 多角度视图</a>
 <a href="#sec-fullbody" data-nav="fullbody" class="nav-sub">👘 全身与姿态</a>
 <a href="#bible-ritual" data-nav="ritual-bible" class="nav-sub">祭祀造型圣经</a>
-<a href="#sec-ritual" data-nav="ritual" class="nav-sub">🙏 祭祀造型</a>
+<a href="#sec-ritual-face" data-nav="ritual-face" class="nav-sub">🙏 祭祀面部</a>
+<a href="#sec-ritual-body" data-nav="ritual-body" class="nav-sub">🙏 祭祀全身</a>
+<a href="#sec-ritual-expr" data-nav="ritual-expr" class="nav-sub">😶 祭祀表情</a>
+<a href="#sec-ritual-all" data-nav="ritual-all" class="nav-sub">⛩️ 祭祀整体</a>
 <a href="#bible-awaken" data-nav="awaken-bible" class="nav-sub">狐祖降临圣经</a>
 <a href="#sec-awaken" data-nav="awaken" class="nav-sub">⚡ 狐祖降临</a>
 <a href="#bible-normal" data-nav="normal-bible" class="nav-sub">狐祖常态圣经</a>
@@ -171,7 +174,7 @@ body{background:#0a0a14;color:#ede4d4;font-family:"PingFang SC","Noto Serif SC",
 <a href="#bible-hushi" data-nav="hushi-bible">狐侍造型圣经</a>
 <a href="#sec-hushi" data-nav="hushi">🦊 白狐狐侍</a>
 <div class="nav-major">众人祭祀</div>
-<a href="#sec-ritual-all" data-nav="ritual-all">⛩️ 祭祀礼服</a>
+<a href="#sec-ritual-group" data-nav="ritual-group">⛩️ 祭祀礼服</a>
 </div>
 </nav>
 
@@ -182,7 +185,7 @@ body{background:#0a0a14;color:#ede4d4;font-family:"PingFang SC","Noto Serif SC",
 <header class="hero">
 <p class="ep-title">狐祖归来 · EP01</p>
 <h1>狐 祖 归 来</h1>
-<p class="subtitle">雪娘 · 临渊 · 玄晏 · 阿檀 造型图集 · 一百四十三图</p>
+<p class="subtitle">雪娘 · 临渊 · 玄晏 · 阿檀 造型图集 · 一百七十一图</p>
 </header>
 
 <!-- ═══════ 狐族常态圣经 ═══════ -->
@@ -600,7 +603,7 @@ body{background:#0a0a14;color:#ede4d4;font-family:"PingFang SC","Noto Serif SC",
 </div>
 <span class="lb-nav lb-next" id="lbNext">&#8250;</span>
 </div>
-<div class="footer">狐祖归来 · 雪娘 · 临渊 · 玄晏 · 阿檀 · 王嵩 · 青禾 · 巡卫 · 统领 · 狐侍 · 一百四十三造型图</div>
+<div class="footer">狐祖归来 · 雪娘 · 临渊 · 玄晏 · 阿檀 · 王嵩 · 青禾 · 巡卫 · 统领 · 狐侍 · 一百七十一造型图</div>
 
 </div><!-- /.main-wrapper -->
 
@@ -634,7 +637,7 @@ document.querySelectorAll(".sidebar-nav a").forEach(function(a){a.addEventListen
 
 // ── Scroll spy ──
 var navLinks=document.querySelectorAll(".sidebar-nav a[data-nav]");
-var sectionMap={"top":0,"bible-common":"#bible-common","bible-lamp":"#bible-lamp","angles":"#sec-angles","fullbody":"#sec-fullbody","ritual-bible":"#bible-ritual","ritual":"#sec-ritual","awaken-bible":"#bible-awaken","awaken":"#sec-awaken","normal-bible":"#bible-normal","normal-face":"#sec-normal-face","normal-body":"#sec-normal-body","normal-expr":"#sec-normal-expr","linyuan":"#sec-linyuan","xuanyan-bible":"#bible-xuanyan","xuanyan-body":"#sec-xuanyan-body","xuanyan-face":"#sec-xuanyan-face","xuanyan-expr":"#sec-xuanyan-expr","xuanyan-ritual":"#sec-xuanyan-ritual","atan-face":"#sec-atan-face","atan-body":"#sec-atan-body","wangsong":"#sec-wangsong","wangsong-bible":"#bible-wangsong","qinghe-face":"#sec-qinghe-face","qinghe-body":"#sec-qinghe-body","qinghe-expr":"#sec-qinghe-expr","guard-bible":"#bible-guard","guard":"#sec-guard","guard-regular":"#sec-guard-regular","hushi-bible":"#bible-hushi","hushi":"#sec-hushi"};
+var sectionMap={"top":0,"bible-common":"#bible-common","bible-lamp":"#bible-lamp","angles":"#sec-angles","fullbody":"#sec-fullbody","ritual-bible":"#bible-ritual","ritual-face":"#sec-ritual-face","ritual-body":"#sec-ritual-body","ritual-expr":"#sec-ritual-expr","ritual-all":"#sec-ritual-all","awaken-bible":"#bible-awaken","awaken":"#sec-awaken","normal-bible":"#bible-normal","normal-face":"#sec-normal-face","normal-body":"#sec-normal-body","normal-expr":"#sec-normal-expr","linyuan":"#sec-linyuan","xuanyan-bible":"#bible-xuanyan","xuanyan-body":"#sec-xuanyan-body","xuanyan-face":"#sec-xuanyan-face","xuanyan-expr":"#sec-xuanyan-expr","xuanyan-ritual":"#sec-xuanyan-ritual","atan-face":"#sec-atan-face","atan-body":"#sec-atan-body","wangsong":"#sec-wangsong","wangsong-bible":"#bible-wangsong","qinghe-face":"#sec-qinghe-face","qinghe-body":"#sec-qinghe-body","qinghe-expr":"#sec-qinghe-expr","guard-bible":"#bible-guard","guard":"#sec-guard","guard-regular":"#sec-guard-regular","ritual-group":"#sec-ritual-group","hushi-bible":"#bible-hushi","hushi":"#sec-hushi"};
 var offsets={};
 function updateOffsets(){for(var k in sectionMap){if(sectionMap[k]===0){offsets[k]=0}else{var el=document.querySelector(sectionMap[k]);offsets[k]=el?el.offsetTop-120:99999}}}
 function setActive(nav){navLinks.forEach(function(l){l.classList.remove("active")});var t=document.querySelector('.sidebar-nav a[data-nav="'+nav+'"]');if(t)t.classList.add("active")}
@@ -661,11 +664,41 @@ const scenes=[
 {file:"狐祖归来_雪娘_特写细节.png",name:"特写细节",script:"妆面与饰品特写——锁定狐眼（眼尾微挑、暗红内眼线）、红宝石耳钉、雪感底妆与旧银发簪",section:"👘 全身与姿态"},
 
 // ── 祭祀造型 ──
-{file:"祭祀_狐祖归来_雪娘_正面全身.png",name:"祭祀 · 正面全身",script:"祭祀装束正面——庄严的古祭服饰，展现雪娘身负祖火、向天祈愿的仪式姿态",section:"🙏 祭祀造型"},
-{file:"祭祀_狐祖归来_雪娘_背面全身.png",name:"祭祀 · 背面全身",script:"祭祀装束背面——长发垂落、祭袍拖地，背影中可见狐族纹样暗绣",section:"🙏 祭祀造型"},
-{file:"祭祀_狐祖归来_雪娘_侧面全身.png",name:"祭祀 · 侧面全身",script:"祭祀装束侧面——祭袍层叠流动，袖口与裙摆的仪式感线条",section:"🙏 祭祀造型"},
-{file:"祭祀_狐祖归来_雪娘_动态站姿.png",name:"祭祀 · 动态站姿",script:"祭祀动作中的动态——举手投足间的仪式韵律，祭火映照指尖",section:"🙏 祭祀造型"},
-{file:"祭祀_狐祖归来_雪娘_特写细节.png",name:"祭祀 · 特写细节",script:"祭祀妆面与祭器特写——祭纹、古银饰、仪式妆容，锁住神圣感的每一处细节",section:"🙏 祭祀造型"},
+{file:"祭祀_狐祖归来_雪娘祭祀_正面正视.png",name:"祭祀 · 正面正视",script:"祭祀正面——祭灵头纱半掩，红宝石血脉节点，圣洁中藏危险",section:"🙏 祭祀面部"},
+{file:"祭祀_狐祖归来_雪娘祭祀_左侧正侧.png",name:"祭祀 · 左侧正侧",script:"祭祀左正侧——头纱珠光流动，侧颜的祭品神性",section:"🙏 祭祀面部"},
+{file:"祭祀_狐祖归来_雪娘祭祀_右侧正侧.png",name:"祭祀 · 右侧正侧",script:"祭祀右正侧——血滴般的红宝石沿纱边垂落",section:"🙏 祭祀面部"},
+{file:"祭祀_狐祖归来_雪娘祭祀_左侧45度.png",name:"祭祀 · 左侧45度",script:"祭祀左45°——微侧间灵纱闪烁，狐性眼神穿透纱幕",section:"🙏 祭祀面部"},
+{file:"祭祀_狐祖归来_雪娘祭祀_右侧45度.png",name:"祭祀 · 右侧45度",script:"祭祀右45°——珠光与暗红的交织",section:"🙏 祭祀面部"},
+{file:"祭祀_狐祖归来_雪娘祭祀_俯视角度.png",name:"祭祀 · 俯视角度",script:"祭祀俯视——头纱覆顶，祭坛视角",section:"🙏 祭祀面部"},
+{file:"祭祀_狐祖归来_雪娘祭祀_仰视角度.png",name:"祭祀 · 仰视角度",script:"祭祀仰视——下颌与纱幕下的轮廓",section:"🙏 祭祀面部"},
+{file:"祭祀_狐祖归来_雪娘祭祀_正面全身.png",name:"祭祀 · 正面全身",script:"祭祀全身正面——月白祭衣，灵纱垂落，替劫祭品的圣洁",section:"🙏 祭祀全身"},
+{file:"祭祀_狐祖归来_雪娘祭祀_背面全身.png",name:"祭祀 · 背面全身",script:"祭祀全身背面——头纱拖地，祭袍层叠如雪",section:"🙏 祭祀全身"},
+{file:"祭祀_狐祖归来_雪娘祭祀_侧面全身.png",name:"祭祀 · 侧面全身",script:"祭祀全身侧面——高领封闭，长裙垂落，指尖微露狐性",section:"🙏 祭祀全身"},
+{file:"祭祀_狐祖归来_雪娘祭祀_动态站姿.png",name:"祭祀 · 动态站姿",script:"祭祀动态——灵纱微扬，步入祭坛的圣仪姿态",section:"🙏 祭祀全身"},
+{file:"祭祀_狐祖归来_雪娘祭祀_特写细节.png",name:"祭祀 · 特写细节",script:"祭祀细节——红宝石、头纱纹理、狐爪指甲、祭衣银线",section:"🙏 祭祀全身"},
+{file:"祭祀_狐祖归来_雪娘祭祀_默认状态.png",name:"祭祀 · 默认状态",script:"祭祀默认——纱幕后平静而危险的注视",section:"😶 祭祀表情"},
+{file:"祭祀_狐祖归来_雪娘祭祀_轻微微笑.png",name:"祭祀 · 轻微微笑",script:"祭祀轻微微笑——祭品唇角的一丝冷意",section:"😶 祭祀表情"},
+{file:"祭祀_狐祖归来_雪娘祭祀_愤怒.png",name:"祭祀 · 愤怒",script:"祭祀愤怒——被选中的不甘",section:"😶 祭祀表情"},
+{file:"祭祀_狐祖归来_雪娘祭祀_悲伤.png",name:"祭祀 · 悲伤",script:"祭祀悲伤——替劫者的孤独",section:"😶 祭祀表情"},
+{file:"祭祀_狐祖归来_雪娘祭祀_恐惧.png",name:"祭祀 · 恐惧",script:"祭祀恐惧——祖灵降临前的颤抖",section:"😶 祭祀表情"},
+{file:"祭祀_狐祖归来_雪娘祭祀_惊讶.png",name:"祭祀 · 惊讶",script:"祭祀惊讶——血脉觉醒的瞬间",section:"😶 祭祀表情"},
+{file:"祭祀_狐祖归来_雪娘祭祀_疑惑.png",name:"祭祀 · 疑惑",script:"祭祀疑惑——替劫祭品的命运之问",section:"😶 祭祀表情"},
+{file:"祭祀_狐祖归来_雪娘祭祀_思考.png",name:"祭祀 · 思考",script:"祭祀思考——默然承受的重量",section:"😶 祭祀表情"},
+{file:"祭祀_狐祖归来_雪娘祭祀_犹豫.png",name:"祭祀 · 犹豫",script:"祭祀犹豫——献祭前的刹那",section:"😶 祭祀表情"},
+{file:"祭祀_狐祖归来_雪娘祭祀_压力状态.png",name:"祭祀 · 压力状态",script:"祭祀压力——祖灵之力灌注的极限",section:"😶 祭祀表情"},
+{file:"祭祀_狐祖归来_雪娘祭祀_释然.png",name:"祭祀 · 释然",script:"祭祀释然——接受命运的平静",section:"😶 祭祀表情"},
+{file:"祭祀_狐祖归来_雪娘祭祀_角色招牌.png",name:"祭祀 · 角色招牌",script:"祭祀招牌——替劫祭品，圣洁与妖异并存的神性凝视",section:"😶 祭祀表情"},
+{file:"祭祀_狐祖归来_雪娘祭祀_脸部_眼镜_发型细节.png",name:"祭祀 · 面部细节",script:"祭祀面部细节——狐眼、暗红内眼线、雪感底妆、唇色",section:"⛩️ 祭祀整体"},
+{file:"祭祀_狐祖归来_雪娘祭祀_服装结构与材质板.png",name:"祭祀 · 服装材质",script:"祭祀材质——丝绸、灵纱、银线、红宝石肌理",section:"⛩️ 祭祀整体"},
+{file:"祭祀_狐祖归来_雪娘祭祀_随身物资产.png",name:"祭祀 · 随身物",script:"祭祀随身物——青玉护环、旧银发簪等祭品配饰",section:"⛩️ 祭祀整体"},
+{file:"祭祀_狐祖归来_雪娘祭祀_剪影识别系统.png",name:"祭祀 · 剪影识别",script:"祭祀剪影——头纱轮廓、祭袍线条、整体比例识别",section:"⛩️ 祭祀整体"},
+
+// ── 众人祭祀礼服 ──
+{file:"狐祖归来_众人祭祀礼服_正面全身.png",name:"众人 · 正面全身",script:"众人祭祀正面——狐族群像的统一祭服，象牙白礼袍，仪式庄重",section:"⛩️ 祭祀礼服"},
+{file:"狐祖归来_众人祭祀礼服_背面全身.png",name:"众人 · 背面全身",script:"众人祭祀背面——整齐列队的背影，狐族文明的秩序",section:"⛩️ 祭祀礼服"},
+{file:"狐祖归来_众人祭祀礼服_侧面全身.png",name:"众人 · 侧面全身",script:"众人祭祀侧面——祭袍层叠，集体仪式的肃穆",section:"⛩️ 祭祀礼服"},
+{file:"狐祖归来_众人祭祀礼服_动态站姿.png",name:"众人 · 动态站姿",script:"众人祭祀动态——行礼或行进的仪式姿态",section:"⛩️ 祭祀礼服"},
+{file:"狐祖归来_众人祭祀礼服_特写细节.png",name:"众人 · 特写细节",script:"众人祭祀细节——祭袍面料、金线刺绣、狐纹暗绣",section:"⛩️ 祭祀礼服"},
 
 // ── 觉醒造型 ──
 {file:"觉醒_狐祖归来_雪娘_正面全身.png",name:"觉醒 · 正面全身",script:"破封觉醒正面——破损月白长裙被暗红血脉网络缠绕，蛛网晶石头纱垂落，荧光紫瞳直视前方",section:"⚡ 狐祖降临"},
@@ -817,7 +850,7 @@ const scenes=[
 
 const root=document.getElementById("content-root");
 const doneSections=new Set();
-const secIds={"📐 多角度视图":"sec-angles","👘 全身与姿态":"sec-fullbody","🙏 祭祀造型":"sec-ritual","⚡ 狐祖降临":"sec-awaken","👑 狐祖面部":"sec-normal-face","👑 狐祖全身":"sec-normal-body","😶 狐祖表情":"sec-normal-expr","🌊 临渊面部":"sec-linyuan","🦊 王玄晏全身":"sec-xuanyan-body","🦊 王玄晏面部":"sec-xuanyan-face","😶 王玄晏表情":"sec-xuanyan-expr","⛩️ 飞升祭服":"sec-xuanyan-ritual","🦊 阿檀面部":"sec-atan-face","🦊 阿檀全身":"sec-atan-body","🦊 王嵩":"sec-wangsong","🦊 青禾面部":"sec-qinghe-face","🦊 青禾全身":"sec-qinghe-body","😶 青禾表情":"sec-qinghe-expr","🦊 巡卫统领":"sec-guard","🦊 白狐巡卫":"sec-guard-regular","🦊 白狐狐侍":"sec-hushi"};
+const secIds={"📐 多角度视图":"sec-angles","👘 全身与姿态":"sec-fullbody","🙏 祭祀造型":"sec-ritual","🙏 祭祀面部":"sec-ritual-face","🙏 祭祀全身":"sec-ritual-body","😶 祭祀表情":"sec-ritual-expr","⛩️ 祭祀整体":"sec-ritual-all","⛩️ 祭祀礼服":"sec-ritual-group","⚡ 狐祖降临":"sec-awaken","👑 狐祖面部":"sec-normal-face","👑 狐祖全身":"sec-normal-body","😶 狐祖表情":"sec-normal-expr","🌊 临渊面部":"sec-linyuan","🦊 王玄晏全身":"sec-xuanyan-body","🦊 王玄晏面部":"sec-xuanyan-face","😶 王玄晏表情":"sec-xuanyan-expr","⛩️ 飞升祭服":"sec-xuanyan-ritual","🦊 阿檀面部":"sec-atan-face","🦊 阿檀全身":"sec-atan-body","🦊 王嵩":"sec-wangsong","🦊 青禾面部":"sec-qinghe-face","🦊 青禾全身":"sec-qinghe-body","😶 青禾表情":"sec-qinghe-expr","🦊 巡卫统领":"sec-guard","🦊 白狐巡卫":"sec-guard-regular","🦊 白狐狐侍":"sec-hushi"};
 scenes.forEach((sc,i)=>{
 const sec=sc.section;
 if(!doneSections.has(sec)){
