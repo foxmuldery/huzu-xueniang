@@ -94,7 +94,10 @@ body{background:#0a0a14;color:#ede4d4;font-family:"PingFang SC","Noto Serif SC",
 .sidebar-nav a:hover{color:rgba(230,210,160,.85);background:rgba(200,170,120,.06)}
 .sidebar-nav a.active{color:#d4c8a0;background:rgba(200,170,120,.1);border-left:2px solid rgba(200,170,120,.5)}
 .sidebar-nav .nav-group{font-size:10px;color:rgba(150,130,90,.35);letter-spacing:.15em;padding:14px 14px 6px;text-transform:uppercase}
-.sidebar-nav .nav-major{font-size:11px;color:rgba(200,170,120,.5);letter-spacing:.15em;padding:16px 14px 4px;border-top:1px solid rgba(180,160,120,.1)}
+.sidebar-nav .nav-major{font-size:11px;color:rgba(200,170,120,.5);letter-spacing:.15em;padding:16px 14px 4px;border-top:1px solid rgba(180,160,120,.1);cursor:pointer;user-select:none}
+.sidebar-nav .nav-major::before{content:"▾ ";font-size:9px;opacity:.6}
+.sidebar-nav .nav-major.collapsed::before{content:"▸ "}
+.sidebar-nav .nav-major:hover{color:rgba(230,200,150,.9)}
 .sidebar-nav .nav-sub{padding-left:24px;font-size:12px}
 
 .voice-section{max-width:1200px;margin:30px auto 10px;padding:0 20px}
@@ -731,6 +734,29 @@ function toggleGuardBible(){var d=document.getElementById("bibleGuardDetail"),b=
 function toggleHushiBible(){var d=document.getElementById("bibleHushiDetail"),b=document.getElementById("bibleHushiToggle");if(d.classList.contains("active")){d.classList.remove("active");b.innerHTML="▸ 查阅白狐狐侍造型圣经"}else{d.classList.add("active");b.innerHTML="▾ 收起白狐狐侍造型圣经";d.scrollIntoView({behavior:"smooth",block:"nearest"})}}
 
 function toggleSidebar(){document.getElementById("sidebar").classList.toggle("open")}
+
+// ── 侧边栏角色折叠：点击角色名展开/收起其子项 ──
+(function(){
+  document.querySelectorAll(".nav-major").forEach(function(h){
+    h.addEventListener("click",function(){
+      var collapsed=h.classList.toggle("collapsed");
+      var el=h.nextElementSibling;
+      while(el&&!el.classList.contains("nav-major")){
+        if(el.tagName==="A")el.style.display=collapsed?"none":"";
+        el=el.nextElementSibling;
+      }
+    });
+    // 默认折叠所有角色（王雪娘除外，保持展开便于直接浏览）
+    if(h.textContent.trim().indexOf("王雪娘")!==0){
+      h.classList.add("collapsed");
+      var el=h.nextElementSibling;
+      while(el&&!el.classList.contains("nav-major")){
+        if(el.tagName==="A")el.style.display="none";
+        el=el.nextElementSibling;
+      }
+    }
+  });
+})();
 
 // ── Auto-add copy buttons to all bible-detail sections ──
 document.querySelectorAll(".bible-detail").forEach(function(d){var b=document.createElement("button");b.className="copy-btn";b.textContent="📋 复制";b.onclick=function(e){e.stopPropagation();var t=d.innerText.trim();navigator.clipboard.writeText(t).then(function(){b.textContent="✓ 已复制";b.classList.add("copied");setTimeout(function(){b.textContent="📋 复制";b.classList.remove("copied")},1500)})};d.appendChild(b)})
