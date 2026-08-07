@@ -96,6 +96,14 @@ body{background:#0a0a14;color:#ede4d4;font-family:"PingFang SC","Noto Serif SC",
 .sidebar-nav .nav-group{font-size:10px;color:rgba(150,130,90,.35);letter-spacing:.15em;padding:14px 14px 6px;text-transform:uppercase}
 .sidebar-nav .nav-major{font-size:11px;color:rgba(200,170,120,.5);letter-spacing:.15em;padding:16px 14px 4px;border-top:1px solid rgba(180,160,120,.1)}
 .sidebar-nav .nav-sub{padding-left:24px;font-size:12px}
+
+.voice-section{max-width:1200px;margin:30px auto 10px;padding:0 20px}
+.voice-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:18px}
+.voice-card{background:rgba(15,18,28,.85);border:1px solid rgba(180,150,100,.15);border-radius:8px;padding:16px 18px}
+.voice-card h3{margin:0 0 10px;font-size:15px;letter-spacing:.1em;color:#e8d9b8;font-weight:500}
+.voice-card audio{width:100%;margin:4px 0 2px;height:34px}
+.voice-card audio::-webkit-media-controls-panel{background:#1c2130}
+.voice-tag{display:block;font-size:11px;color:rgba(200,170,120,.5);letter-spacing:.08em;margin-bottom:8px}
 .sidebar-toggle{display:none;position:fixed;top:14px;left:14px;z-index:901;width:36px;height:36px;border:1px solid rgba(180,160,120,.25);border-radius:4px;background:rgba(10,10,22,.9);color:rgba(200,180,140,.6);font-size:20px;cursor:pointer;align-items:center;justify-content:center}
 
 .main-wrapper{margin-left:180px}
@@ -187,6 +195,8 @@ body{background:#0a0a14;color:#ede4d4;font-family:"PingFang SC","Noto Serif SC",
 <a href="#sec-hushi" data-nav="hushi">🦊 白狐狐侍</a>
 <div class="nav-major">众人祭祀</div>
 <a href="#sec-ritual-group" data-nav="ritual-group">⛩️ 祭祀礼服</a>
+<div class="nav-major">角色配音</div>
+<a href="#sec-voice" data-nav="voice">🎙 角色配音</a>
 </div>
 </nav>
 
@@ -615,6 +625,88 @@ body{background:#0a0a14;color:#ede4d4;font-family:"PingFang SC","Noto Serif SC",
 </div>
 <span class="lb-nav lb-next" id="lbNext">&#8250;</span>
 </div>
+
+<!-- ═══════ 角色配音 ═══════ -->
+<div class="cat-divider" id="sec-voice"><div class="line"></div><span class="cat-label">角 色 配 音</span><div class="line"></div></div>
+
+<div class="voice-section">
+<div class="voice-grid">
+
+<div class="voice-card">
+<h3>🎙 王雪娘</h3>
+<audio controls preload="none" src="audio/王雪娘-我可以承你的法。但我的痛，我自己记。.mp3"></audio>
+<span class="voice-tag">长版 · 承法自记</span>
+<audio controls preload="none" src="audio/王雪娘-是我救了猫，是我进了阵.mp3"></audio>
+<span class="voice-tag">短版 · 救猫入阵</span>
+</div>
+
+<div class="voice-card">
+<h3>🎙 临渊</h3>
+<audio controls preload="none" src="audio/临渊-水镜只照人心，不替人说谎.mp3"></audio>
+<span class="voice-tag">长版 · 水镜照心</span>
+<audio controls preload="none" src="audio/临渊-祖君既敢照众生.mp3"></audio>
+<span class="voice-tag">短版 · 照众生</span>
+</div>
+
+<div class="voice-card">
+<h3>🎙 王玄晏</h3>
+<audio controls preload="none" src="audio/王玄晏-白狐的人，我来处置.mp3"></audio>
+<span class="voice-tag">长版 · 我来处置</span>
+<audio controls preload="none" src="audio/王玄晏-我知道。问心阵只会.mp3"></audio>
+<span class="voice-tag">短版 · 问心阵</span>
+</div>
+
+<div class="voice-card">
+<h3>🎙 王嵩</h3>
+<audio controls preload="none" src="audio/王嵩-祖印可以压血，却压不出人心.mp3"></audio>
+<span class="voice-tag">长版 · 祖印压血</span>
+<audio controls preload="none" src="audio/王嵩-误导巡卫，协助罪狐逃亡.mp3"></audio>
+<span class="voice-tag">短版 · 误导巡卫</span>
+</div>
+
+<div class="voice-card">
+<h3>🎙 王赤离</h3>
+<audio controls preload="none" src="audio/王赤离-祖印有什么好看.mp3"></audio>
+<span class="voice-tag">长版 · 祖印好看</span>
+<audio controls preload="none" src="audio/王赤离-我只想看看.mp3"></audio>
+<span class="voice-tag">短版 · 只想看看</span>
+</div>
+
+<div class="voice-card">
+<h3>🎙 阿檀</h3>
+<audio controls preload="none" src="audio/阿檀-他们说三道雷以后进去收灰.mp3"></audio>
+<span class="voice-tag">长版 · 三道雷收灰</span>
+<audio controls preload="none" src="audio/阿檀-我以前总觉得，不选就不会选错。原来不选也会死人。.mp3"></audio>
+<span class="voice-tag">短版 · 不选也死人</span>
+</div>
+
+<div class="voice-card">
+<h3>🎙 青禾</h3>
+<audio controls preload="none" src="audio/青禾-灯是假的！.mp3"></audio>
+<span class="voice-tag">长版 · 灯是假的</span>
+<audio controls preload="none" src="audio/青禾-我自己找到的.mp3"></audio>
+<span class="voice-tag">短版 · 自己找到</span>
+</div>
+
+<div class="voice-card">
+<h3>🎙 娑罗</h3>
+<audio controls preload="none" src="audio/娑罗-狐族烂过，人心也脏过.mp3"></audio>
+<span class="voice-tag">长版 · 狐族烂过</span>
+<audio controls preload="none" src="audio/娑罗-她让你读罪.mp3"></audio>
+<span class="voice-tag">短版 · 读罪</span>
+</div>
+
+<div class="voice-card">
+<h3>🎙 陆沉</h3>
+<audio controls preload="none" src="audio/陆沉-我不信祖印.mp3"></audio>
+<span class="voice-tag">长版 · 不信祖印</span>
+<audio controls preload="none" src="audio/陆沉-这枚狐铃属于青禾.mp3"></audio>
+<span class="voice-tag">短版 · 狐铃属青禾</span>
+</div>
+
+</div>
+</div>
+
 <div class="footer">狐祖归来 · 雪娘 · 临渊 · 玄晏 · 阿檀 · 王嵩 · 青禾 · 巡卫 · 统领 · 狐侍 · 二百六十六造型图</div>
 
 </div><!-- /.main-wrapper -->
@@ -649,7 +741,7 @@ document.querySelectorAll(".sidebar-nav a").forEach(function(a){a.addEventListen
 
 // ── Scroll spy ──
 var navLinks=document.querySelectorAll(".sidebar-nav a[data-nav]");
-var sectionMap={"top":0,"bible-common":"#bible-common","bible-lamp":"#bible-lamp","angles":"#sec-angles","fullbody":"#sec-fullbody","lamp-expr":"#sec-lamp-expr","ritual-bible":"#bible-ritual","ritual-face":"#sec-ritual-face","ritual-body":"#sec-ritual-body","ritual-expr":"#sec-ritual-expr","ritual-all":"#sec-ritual-all","awaken-bible":"#bible-awaken","awaken":"#sec-awaken","normal-bible":"#bible-normal","normal-face":"#sec-normal-face","normal-body":"#sec-normal-body","normal-expr":"#sec-normal-expr","thunder-face":"#sec-thunder-face","thunder-body":"#sec-thunder-body","thunder-expr":"#sec-thunder-expr","thunder-all":"#sec-thunder-all","linyuan":"#sec-linyuan","xuanyan-bible":"#bible-xuanyan","xuanyan-body":"#sec-xuanyan-body","xuanyan-face":"#sec-xuanyan-face","xuanyan-expr":"#sec-xuanyan-expr","xuanyan-ritual":"#sec-xuanyan-ritual","xuanyan-ritual-body":"#sec-xuanyan-ritual-body","xuanyan-ritual-expr":"#sec-xuanyan-ritual-expr","xuanyan-ritual-all":"#sec-xuanyan-ritual-all","xuanyan-thunder":"#sec-xuanyan-thunder","atan-face":"#sec-atan-face","atan-body":"#sec-atan-body","wangsong":"#sec-wangsong","wangsong-bible":"#bible-wangsong","qinghe-face":"#sec-qinghe-face","qinghe-body":"#sec-qinghe-body","qinghe-expr":"#sec-qinghe-expr","guard-bible":"#bible-guard","guard-face":"#sec-guard-face","guard-body":"#sec-guard-body","guard-expr":"#sec-guard-expr","guard-all":"#sec-guard-all","guard-regular":"#sec-guard-regular","ritual-group":"#sec-ritual-group","hushi-bible":"#bible-hushi","hushi":"#sec-hushi"};
+var sectionMap={"top":0,"bible-common":"#bible-common","bible-lamp":"#bible-lamp","angles":"#sec-angles","fullbody":"#sec-fullbody","lamp-expr":"#sec-lamp-expr","ritual-bible":"#bible-ritual","ritual-face":"#sec-ritual-face","ritual-body":"#sec-ritual-body","ritual-expr":"#sec-ritual-expr","ritual-all":"#sec-ritual-all","awaken-bible":"#bible-awaken","awaken":"#sec-awaken","normal-bible":"#bible-normal","normal-face":"#sec-normal-face","normal-body":"#sec-normal-body","normal-expr":"#sec-normal-expr","thunder-face":"#sec-thunder-face","thunder-body":"#sec-thunder-body","thunder-expr":"#sec-thunder-expr","thunder-all":"#sec-thunder-all","linyuan":"#sec-linyuan","xuanyan-bible":"#bible-xuanyan","xuanyan-body":"#sec-xuanyan-body","xuanyan-face":"#sec-xuanyan-face","xuanyan-expr":"#sec-xuanyan-expr","xuanyan-ritual":"#sec-xuanyan-ritual","xuanyan-ritual-body":"#sec-xuanyan-ritual-body","xuanyan-ritual-expr":"#sec-xuanyan-ritual-expr","xuanyan-ritual-all":"#sec-xuanyan-ritual-all","xuanyan-thunder":"#sec-xuanyan-thunder","atan-face":"#sec-atan-face","atan-body":"#sec-atan-body","wangsong":"#sec-wangsong","wangsong-bible":"#bible-wangsong","qinghe-face":"#sec-qinghe-face","qinghe-body":"#sec-qinghe-body","qinghe-expr":"#sec-qinghe-expr","guard-bible":"#bible-guard","guard-face":"#sec-guard-face","guard-body":"#sec-guard-body","guard-expr":"#sec-guard-expr","guard-all":"#sec-guard-all","guard-regular":"#sec-guard-regular","ritual-group":"#sec-ritual-group","hushi-bible":"#bible-hushi","hushi":"#sec-hushi","voice":"#sec-voice"};
 var offsets={};
 function updateOffsets(){for(var k in sectionMap){if(sectionMap[k]===0){offsets[k]=0}else{var el=document.querySelector(sectionMap[k]);offsets[k]=el?el.offsetTop-120:99999}}}
 function setActive(nav){navLinks.forEach(function(l){l.classList.remove("active")});var t=document.querySelector('.sidebar-nav a[data-nav="'+nav+'"]');if(t)t.classList.add("active")}
